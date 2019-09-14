@@ -1,0 +1,26 @@
+@import '../../../styles/base';
+
+.title {
+  display: block;
+
+  position: relative;
+
+  font-size: var(--jt-type-size-2);
+  line-height: var(--jt-type-lh-2);
+
+  margin-bottom: rem(50px);
+
+  &:after {
+    position: absolute;
+
+    content: "";
+
+    top: calc(100% + var(--jt-padding));
+    left: 0px;
+
+    width: rem(50px);
+    height: rem(2px);
+
+    background-color: var(--jt-color-accent);
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../styles/base';
+
+.link {
+  text-decoration: none;
+
+  &:before {
+    content: "\2014 ";
+
+    margin-right: rem(6px);
+
+    transition: {
+      duration: 0.3s;
+      timing-function: ease;
+      property: margin-right;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &:before {
+      margin-right: rem(16px);
+    }
+  }
+}

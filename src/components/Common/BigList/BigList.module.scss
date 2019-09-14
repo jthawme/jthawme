@@ -1,0 +1,40 @@
+
+.list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.item {
+  margin-bottom: calc(var(--jt-padding) * 1.5);
+  a {
+    display: grid;
+
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: var(--jt-padding);
+
+    width: 100%;
+
+    text-decoration: none;
+
+    &:hover .label {
+      color: var(--jt-color-text-light-2);
+    }
+  }
+}
+
+.text {
+  font-size: var(--jt-type-size-3);
+  line-height: var(--jt-type-lh-3);
+}
+
+.label {
+  color: var(--jt-color-text-light-1);
+
+  flex-basis: 25%;
+
+  transition: inherit;
+}
+
+

@@ -1,0 +1,38 @@
+@import '../../../styles/base';
+
+.footer {
+  margin-top: calc(var(--jt-padding) * 6);
+  padding-bottom: calc(var(--jt-padding) * 8);
+
+  color: var(--jt-color-accent-dark-1);
+}
+
+.container {
+  @include container;
+
+  display: grid;
+
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: var(--jt-padding);
+
+  border-top: #{rem(1px)} solid var(--jt-color-text-light-2);
+
+  padding-top: calc(var(--jt-padding) * 2);
+
+  .left {
+  }
+
+  .title {
+    display: block;
+
+    color: var(--jt-color-accent-dark-1);
+  }
+
+  p {
+    color: var(--jt-color-text-light-1);
+
+    margin: 0 0 var(--jt-padding);
+
+    max-width: rem(400px);
+  }
+}

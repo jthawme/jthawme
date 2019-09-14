@@ -1,0 +1,46 @@
+@import '~normalize.css';
+
+@import 'vars/colours';
+@import 'vars/type';
+@import 'vars/sizes';
+
+@import 'utils/fonts';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--jt-font-family);
+
+  color: var(--jt-color-text);
+}
+
+a {
+  color: var(--jt-color-accent);
+
+  transition: {
+    duration: 0.3s;
+    property: color;
+    timing-function: ease;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--jt-color-accent-light-1);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+
