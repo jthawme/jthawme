@@ -11,7 +11,7 @@ import styles from './Work.module.scss';
 
 const Work = ({}) => {
   return (
-    <main className={styles.page}>
+    <main className={"page"}>
       <Row
         title={<Title>Work</Title>}>
         <BigList>

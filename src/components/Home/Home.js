@@ -8,11 +8,11 @@ import FancyLink from '../Common/FancyLink/FancyLink';
 import BigList from '../Common/BigList/BigList';
 import BigListItem from '../Common/BigList/BigListItem';
 
-import styles from './Home.module.scss';
+// import styles from './Home.module.scss';
 
 const Home = ({}) => {
   return (
-    <main className={styles.page}>
+    <main className={"page"}>
       <Row
         title={<Title>Introduction</Title>}
         footer={<FancyLink to="/about">Read More</FancyLink>}>

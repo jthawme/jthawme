@@ -56,13 +56,13 @@ const EmbedBlock = ({ videoId, ...props }) => {
 
 const Project = ({}) => {
   return (
-    <main className={styles.page}>
+    <main className={"page"}>
       <h1 className={styles.title}>Play</h1>
       <div className={styles.description}>
-        <p>
+        <p className="large">
           A table of instruments designed for anyone to make a song they could be proud of. Designed from the same school of thought as things like tonepads, these <em>instruments</em> were able to let anyone (musically skilled or not) create a melody, a drum backing, a bass line and to choose the sounds on the <em>mixer</em>.
         </p>
-        <p>
+        <p className="large">
           All the instruments were in the same key and could not go outside of it, which allowed any arrangement to sound like it worked. Users could then print their song out, for a unique keepsake.
         </p>
       </div>

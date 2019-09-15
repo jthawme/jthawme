@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       {
         scrollState => (
           <>
-            <Header className={styles.header} {...scrollState}/> }
+            <Header className={styles.header} {...scrollState}/>
 
             <div className={styles.top}>
               <Link to={"/"} className={styles.logo}><img src={logoImg}/></Link>

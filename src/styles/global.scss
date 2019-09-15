@@ -6,6 +6,8 @@
 
 @import 'utils/fonts';
 
+@import 'base';
+
 * {
   box-sizing: border-box;
 }
@@ -41,6 +43,25 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+}
+
+p {
+  font-size: var(--jt-type-size-2);
+  line-height: var(--jt-type-lh-2);
+
+  margin: 0 0 var(--jt-type-lh-2);
+
+  &.large {
+    font-size: var(--jt-type-size-3);
+    line-height: var(--jt-type-lh-3);
+
+    margin: 0 0 var(--jt-type-lh-3);
+  }
+}
+
+.page {
+  @include container;
+  @include page;
 }
 
 
