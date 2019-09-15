@@ -2,7 +2,8 @@ import React from 'react';
 
 import classNames from 'classnames';
 import YouTube from 'react-youtube';
-import { Link } from 'gatsby';
+
+import HoverLink from '../Common/HoverLink/HoverLink';
 
 import styles from './Project.module.scss';
 
@@ -85,18 +86,20 @@ const Project = ({}) => {
           videoId={'ka8wUBGli6A'}/>
       </div>
       <div className={styles.footer}>
-        <Link
+        <HoverLink
           to={'/project'}
+          image={img}
           className={[styles.footerLeft, styles.footerLink].join(' ')}>
           <span className={styles.footerLinkTitle}>Previous</span>
           <span className={styles.footerLinkLabel}>Endless Vine</span>
-        </Link>
-        <Link
+        </HoverLink>
+        <HoverLink
           to={'/project'}
+          image={img}
           className={[styles.footerRight, styles.footerLink].join(' ')}>
           <span className={styles.footerLinkTitle}>Next</span>
           <span className={styles.footerLinkLabel}>Drum Generates</span>
-        </Link>
+        </HoverLink>
       </div>
     </main>
   )

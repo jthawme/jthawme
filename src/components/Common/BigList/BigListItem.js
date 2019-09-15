@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
 import classNames from 'classnames';
+
+import HoverLink from '../HoverLink/HoverLink';
 
 import styles from './BigList.module.scss';
 
-const BigListItem = ({ className, to, label, text }) => {
+const BigListItem = ({ className, to, label, text, image }) => {
   const cls = classNames(
     styles.item,
     className
@@ -13,10 +14,10 @@ const BigListItem = ({ className, to, label, text }) => {
 
   return (
     <li className={cls}>
-      <Link to={to}>
+      <HoverLink to={to} image={image}>
         <span className={styles.text}>{ text }</span>
         <span className={styles.label}>{ label }</span>
-      </Link>
+      </HoverLink>
     </li>
   );
 };

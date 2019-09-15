@@ -64,4 +64,13 @@ p {
   @include page;
 }
 
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+
+  + footer {
+    margin-top: 0;
+  }
+}
+
 

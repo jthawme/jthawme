@@ -23,10 +23,19 @@
 }
 
 @mixin page() {
+  position: relative;
+
+  z-index: 1;
+
   padding-top: var(--jt-header-space);
 }
 
 @mixin breakpoint($point) {
+  @if $point == 'mobile' {
+    @media screen and (min-width: rem(500px)) {
+      @content;
+    }
+  }
   @if $point == 'tablet' {
     @media screen and (min-width: rem(768px)) {
       @content;

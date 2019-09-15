@@ -1,5 +1,9 @@
-const React = require("react")
-const Layout = require("./src/components/Common/Layout/Layout.js").default
+import React from 'react';
+import Layout from './src/components/Common/Layout/Layout.js';
+import wrapElement from './src/state/wrapElement';
 
 // Apply persisted layout
-exports.wrapPageElement = ({ element, props }) => <Layout {...props}>{ element }</Layout>;
+export const wrapPageElement = ({ element, props }) => <Layout {...props}>{ element }</Layout>;
+
+// Apply redux provider
+export const wrapRootElement = wrapElement;

@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ScrollReact from "../ScrollReact";
+import BgImage from "../BgImage/BgImage";
 
 import "../../../styles/global.scss";
 import styles from "./Layout.module.scss"
@@ -24,9 +25,11 @@ const Layout = ({ children }) => {
               <Link to={"/"} className={styles.logo}><img src={logoImg}/></Link>
             </div>
 
+            <BgImage className={styles.bg} />
+
             {children}
 
-            <Footer/>
+            <Footer className={styles.footer}/>
           </>
         )
       }
