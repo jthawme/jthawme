@@ -32,4 +32,9 @@
       @content;
     }
   }
+  @if $point == 'desktop' {
+    @media screen and (min-width: rem(950px)) {
+      @content;
+    }
+  }
 }

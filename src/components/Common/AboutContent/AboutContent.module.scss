@@ -2,5 +2,5 @@
   font-size: var(--jt-type-size-3);
   line-height: var(--jt-type-lh-3);
 
-  margin: 0 0 var(--jt-padding);
+  margin: 0 0 calc(var(--jt-type-lh-3) * 1);
 }

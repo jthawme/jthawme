@@ -3,31 +3,37 @@ import React from 'react';
 // import classNames from 'classnames';
 import Title from '../Common/Title/Title';
 import Row from '../Common/Row/Row';
-import AboutContent from '../Common/AboutContent/AboutContent';
 import FancyLink from '../Common/FancyLink/FancyLink';
 import BigList from '../Common/BigList/BigList';
 import BigListItem from '../Common/BigList/BigListItem';
 
-import styles from './Home.module.scss';
+import styles from './Work.module.scss';
 
-const Home = ({}) => {
+const Work = ({}) => {
   return (
     <main className={styles.page}>
       <Row
-        title={<Title>Introduction</Title>}
-        footer={<FancyLink to="/about">Read More</FancyLink>}>
-        <AboutContent small/>
-      </Row>
-      <Row
-        title={<Title>Work</Title>}
-        footer={<FancyLink to="/work">View all</FancyLink>}>
+        title={<Title>Work</Title>}>
         <BigList>
           <BigListItem
-            to={"/project"}
+            to={"/work"}
             text="Play"
             label="Installation"/>
           <BigListItem
-            to={"/project"}
+            to={"/work"}
+            text="Drum Generates"
+            label="Generative Posters"/>
+        </BigList>
+      </Row>
+      <Row
+        title={<Title>Experiments</Title>}>
+        <BigList>
+          <BigListItem
+            to={"/work"}
+            text="Play"
+            label="Installation"/>
+          <BigListItem
+            to={"/work"}
             text="Drum Generates"
             label="Generative Posters"/>
         </BigList>
@@ -36,4 +42,4 @@ const Home = ({}) => {
   )
 };
 
-export default Home;
+export default Work;

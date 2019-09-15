@@ -6,8 +6,12 @@
   --jt-type-size-1: #{rem(12px)};
   --jt-type-size-2: #{rem(16px)};
   --jt-type-size-3: #{rem(24px)};
+  --jt-type-size-4: #{rem(36px)};
+  --jt-type-size-5: #{rem(60px)};
 
   --jt-type-lh-1: 1.5;
-  --jt-type-lh-2: 1.5;
+  --jt-type-lh-2: #{rem(24px)};
   --jt-type-lh-3: #{rem(32px)};
+  --jt-type-lh-4: #{rem(48px)};
+  --jt-type-lh-5: #{rem(60px)};
 }

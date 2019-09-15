@@ -1,0 +1,6 @@
+@import '../../styles/base';
+
+.page {
+  @include container;
+  @include page;
+}
