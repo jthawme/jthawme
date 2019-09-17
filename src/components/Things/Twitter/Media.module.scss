@@ -1,0 +1,11 @@
+@import '../../../styles/base';
+
+.item {
+  text-align: center;
+
+  img,
+  iframe,
+  video {
+    width: 100%;
+  }
+}

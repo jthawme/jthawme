@@ -67,10 +67,10 @@ p {
 .fullscreen {
   width: 100vw;
   height: 100vh;
+}
 
-  + footer {
-    margin-top: 0;
-  }
+.collapse + footer {
+  margin-top: 0;
 }
 
 

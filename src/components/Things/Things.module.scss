@@ -1,6 +1,86 @@
 @import '../../styles/base';
 
+.wrapper {
+  background-color: var(--jt-color-text-light-2);
+}
+
+.things {
+  opacity: 0;
+
+  transform: translate3d(0, -10px, 0);
+
+  &.animate {
+    transition: {
+      duration: 0.3s;
+      property: opacity, transform;
+      timing-function: ease;
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .iframe {
   width: 100%;
   height: 100%;
+}
+
+.attribution {
+  display: flex;
+
+  padding: var(--jt-padding) 0;
+
+  justify-content: space-between;
+
+  &Fullscreen {
+    @include container;
+
+    position: absolute;
+
+    bottom: var(--jt-padding);
+    left: 50%;
+
+    transform: translate3d(-50%, 0, 0);
+
+    mix-blend-mode: exclusion;
+  }
+
+  &Action {
+    flex-basis: 25%;
+
+    button {
+      color: var(--jt-color-accent);
+      border: 0;
+
+      outline: 0;
+
+      cursor: pointer;
+
+      transition: {
+        duration: 0.3s;
+        property: color;
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--jt-color-accent-light-1);
+      }
+    }
+  }
+}
+
+.pool {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: calc(var(--jt-padding) * 5);
+
+  padding: calc(var(--jt-padding) * 2);
+}
+
+
+.item {
+  margin-bottom: calc(var(--jt-padding) * 5);
 }
