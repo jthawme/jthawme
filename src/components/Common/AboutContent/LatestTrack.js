@@ -35,13 +35,13 @@ const AudioTrack = () => {
 
   if (!track) {
     return (
-      <a href="https://www.last.fm/user/jawknee4" href={url} target="_blank" rel="noreferrer noopener">
+      <a href="https://www.last.fm/user/jawknee4" target="_blank" rel="noreferrer noopener">
         Something Cool
       </a>
     );
   }
 
-  const { artist, image: images, name, url } = track;
+  const { artist, image: images, name } = track;
   const image = images.pop();
 
   return (

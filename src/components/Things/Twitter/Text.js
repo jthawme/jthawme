@@ -1,5 +1,7 @@
 import React from 'react';
 
+const SKIP_TAGS = ['inprogress'];
+
 export function mergeText(text, entities) {
   if ((entities.urls && entities.urls.length === 0) && (entities.media && entities.media.length === 0)) {
     return text;
@@ -22,7 +24,11 @@ export function mergeText(text, entities) {
   });
 
   entities.hashtags.forEach(h => {
-    _text = _text.replace(`#${h.text}`, `<a href="https://twitter.com/hashtag/${h.text}?src=hash" target="_blank">#${h.text}</a>`);
+    if (SKIP_TAGS.includes(h.text)) {
+      _text = _text.replace(`#${h.text}`, ``);
+    } else {
+      _text = _text.replace(`#${h.text}`, `<a href="https://twitter.com/hashtag/${h.text}?src=hash" target="_blank">#${h.text}</a>`);
+    }
   });
 
   return _text;

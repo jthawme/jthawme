@@ -3,13 +3,12 @@ import React from 'react';
 // import classNames from 'classnames';
 import Title from '../Common/Title/Title';
 import Row from '../Common/Row/Row';
-import FancyLink from '../Common/FancyLink/FancyLink';
 import BigList from '../Common/BigList/BigList';
 import BigListItem from '../Common/BigList/BigListItem';
 
-import styles from './Work.module.scss';
+// import styles from './Work.module.scss';
 
-const Work = ({}) => {
+const Work = () => {
   return (
     <main className={"page"}>
       <Row

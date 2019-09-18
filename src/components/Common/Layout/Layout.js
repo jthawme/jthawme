@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
             <Header className={styles.header} {...scrollState}/>
 
             <div className={styles.top}>
-              <Link to={"/"} className={styles.logo}><img src={logoImg}/></Link>
+              <Link to={"/"} className={styles.logo}><img alt="" src={logoImg}/></Link>
             </div>
 
             <BgImage className={styles.bg} />

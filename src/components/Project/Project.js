@@ -24,10 +24,10 @@ const Block = ({ className, children, desktopSpan = '1 / span 12', tabletSpan = 
   return <div className={cls} style={style}>{ children }</div>;
 }
 
-const ImageBlock = ({ src, ...props }) => {
+const ImageBlock = ({ src, alt="", ...props }) => {
   return (
     <Block className={styles.blockImage} {...props}>
-      <img src={src}/>
+      <img src={src} alt={alt}/>
     </Block>
   )
 };
@@ -55,7 +55,7 @@ const EmbedBlock = ({ videoId, ...props }) => {
   )
 };
 
-const Project = ({}) => {
+const Project = () => {
   return (
     <main className={"page"}>
       <h1 className={styles.title}>Play</h1>
@@ -74,12 +74,15 @@ const Project = ({}) => {
           desktopSpan="2 / span 5"
           />
         <ImageBlock
+          alt="Test"
           src={img}
           desktopSpan="8 / span 4"/>
         <ImageBlock
+          alt="Test"
           src={img}
           desktopSpan="1 / span 7"/>
         <ImageBlock
+          alt="Test"
           src={img}
           desktopSpan="10 / span 3"/>
         <EmbedBlock

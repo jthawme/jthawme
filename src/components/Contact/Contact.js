@@ -6,7 +6,7 @@ import Row from '../Common/Row/Row';
 
 // import styles from './Contact.module.scss';
 
-const About = ({}) => {
+const About = () => {
   return (
     <main className={"page"}>
       <Row

@@ -108,7 +108,7 @@ class Things extends React.Component {
     });
   }
 
-  renderItem(data, show) {
+  renderItem(data, show = true) {
     if (!show) {
       return null;
     }
@@ -119,6 +119,30 @@ class Things extends React.Component {
         key={data.content_id}
         {...data.content}/>
     )
+  }
+
+  displayColumns(data) {
+    let columns = 1;
+
+    if (window.matchMedia('(min-width: 500px').matches) {
+      columns = 2;
+    }
+
+    if (window.matchMedia('(min-width: 768px').matches) {
+      columns = 3;
+    }
+
+    const cols = [];
+
+    for (let i = 0; i < columns; i++) {
+      cols.push(data.map((d,idx) => {
+        return this.renderItem(d, idx % columns === i)
+      }));
+    }
+
+    return cols.map((list, i) => {
+      return <div key={ i } className={styles.poolColumn}>{list}</div>
+    })
   }
 
   render() {
@@ -146,15 +170,7 @@ class Things extends React.Component {
             onShuffle={this.onShuffle}/>
         </main>
         <section className={styles.pool}>
-          <div className={styles.poolColumn}>
-            { data.map((d,i) => this.renderItem(d, i % 3 === 0)) }
-          </div>
-          <div className={styles.poolColumn}>
-            { data.map((d,i) => this.renderItem(d, i % 3 === 1)) }
-          </div>
-          <div className={styles.poolColumn}>
-            { data.map((d,i) => this.renderItem(d, i % 3 === 2)) }
-          </div>
+          { this.displayColumns(data) }
         </section>
       </div>
     )

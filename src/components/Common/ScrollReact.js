@@ -39,7 +39,6 @@ class ScrollReact extends React.Component {
   componentDidMount() {
     this.addEventListeners();
 
-    const el = this.getRoot();
     this.lastY = window.scrollY;
     this.update();
   }
@@ -49,9 +48,7 @@ class ScrollReact extends React.Component {
   }
 
   addEventListeners() {
-    const el = this.getRoot();
-
-    window.addEventListener('scroll', e => {
+    window.addEventListener('scroll', () => {
       this.lastY = window.scrollY;
       this.requestTick();
     });

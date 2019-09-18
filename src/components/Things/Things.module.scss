@@ -49,15 +49,19 @@
   }
 
   &Action {
-    flex-basis: 25%;
 
     button {
       color: var(--jt-color-accent);
       border: 0;
 
+      padding: 0;
+      margin: 0;
+
       outline: 0;
 
       cursor: pointer;
+
+      background-color: transparent;
 
       transition: {
         duration: 0.3s;
@@ -74,10 +78,19 @@
 
 .pool {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: calc(var(--jt-padding) * 5);
+  grid-template-columns: 1fr;
 
   padding: calc(var(--jt-padding) * 2);
+
+  @include breakpoint(mobile) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: calc(var(--jt-padding) * 2);
+  }
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: calc(var(--jt-padding) * 5);
+  }
 }
 
 

@@ -10,7 +10,7 @@ const BgImage = ({ className }) => {
     return null;
   }
 
-  return <div className={[className, styles.wrapper].join(' ')}><img src={image}/></div>
+  return <div className={[className, styles.wrapper].join(' ')}><img alt="" src={image}/></div>
 };
 
 export default BgImage;

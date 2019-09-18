@@ -11,7 +11,7 @@ import BigListItem from '../Common/BigList/BigListItem';
 // import styles from './Home.module.scss';
 import img from '../../images/project.jpg';
 
-const Home = ({}) => {
+const Home = () => {
   return (
     <main className={"page"}>
       <Row

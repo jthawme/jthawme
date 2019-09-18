@@ -7,7 +7,7 @@ import Row from '../Common/Row/Row';
 
 // import styles from './About.module.scss';
 
-const About = ({}) => {
+const About = () => {
   return (
     <main className={"page"}>
       <Row

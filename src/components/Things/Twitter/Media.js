@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Media.module.scss';
 
 const MediaItem = (props) => {
-  const { className, type, video_info, media_url_https } = props;
+  const { type, video_info, media_url_https } = props;
   const getVideoUrl = (variants) => {
     const _arr = variants.reverse();
 
@@ -17,13 +17,13 @@ const MediaItem = (props) => {
     case 'video':
       return (
         <div className={styles.item}>
-          <video controls loop autoPlay muted src={getVideoUrl(video_info.variants)}/>
+          <video controls loop muted src={getVideoUrl(video_info.variants)}/>
         </div>
       );
     case 'photo':
       return (
         <div className={styles.item}>
-          <img src={media_url_https}/>
+          <img alt="" src={media_url_https}/>
         </div>
       );
     default:

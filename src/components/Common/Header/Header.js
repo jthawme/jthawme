@@ -39,7 +39,7 @@ const Header = ({ className, pinned }) => {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className={styles.image}>
-          <img src={logoImg}/>
+          <img alt="" src={logoImg}/>
         </div>
       </nav>
     </header>

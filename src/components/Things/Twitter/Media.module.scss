@@ -3,6 +3,10 @@
 .item {
   text-align: center;
 
+  line-height: 0;
+
+  margin-bottom: var(--jt-padding);
+
   img,
   iframe,
   video {
