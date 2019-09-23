@@ -47,3 +47,9 @@
     }
   }
 }
+
+@mixin breakpointSize($size) {
+  @media screen and (min-width: #{rem($size)}) {
+    @content;
+  }
+}

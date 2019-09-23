@@ -40,6 +40,21 @@ const THINGS = [
     source: 'iframe',
     src: 'https://jt-sketches.netlify.com/021/',
     label: 'Daily Sketch #021'
+  },
+  {
+    source: 'iframe',
+    src: 'https://jt-sketches.netlify.com/039/',
+    label: 'Daily Sketch #039'
+  },
+  {
+    source: 'iframe',
+    src: 'https://jt-sketches.netlify.com/040/',
+    label: 'Daily Sketch #040'
+  },
+  {
+    source: 'iframe',
+    src: 'https://jt-sketches.netlify.com/041/',
+    label: 'Daily Sketch #041'
   }
 ];
 
@@ -51,7 +66,7 @@ class Things extends React.Component {
       fullscreen: true,
       show: false,
       animate: false,
-      info: this.randomThing(THINGS),
+      info: this.randomThing(THINGS, true),
       data: []
     };
 
@@ -82,8 +97,12 @@ class Things extends React.Component {
     clearTimeout(this.timer);
   }
 
-  randomThing = (things) => {
-    return things[Math.floor(Math.random() * things.length)];
+  randomThing = (things, init) => {
+    const _things = things.filter(t => {
+      return init || (t.label !== this.state.info.label)
+    });
+
+    return _things[Math.floor(Math.random() * _things.length)];
   }
 
   onShuffle = () => {
@@ -128,8 +147,12 @@ class Things extends React.Component {
       columns = 2;
     }
 
-    if (window.matchMedia('(min-width: 768px').matches) {
+    if (window.matchMedia('(min-width: 950px').matches) {
       columns = 3;
+    }
+
+    if (window.matchMedia('(min-width: 1280px').matches) {
+      columns = 4;
     }
 
     const cols = [];

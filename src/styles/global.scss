@@ -19,6 +19,27 @@ body {
   font-family: var(--jt-font-family);
 
   color: var(--jt-color-text);
+
+  transition: {
+    duration: 0.3s;
+    property: background-color;
+  }
+
+  background-color: var(--jt-bg);
+}
+
+.page-professional {
+  --jt-bg: #111;
+  --jt-bg-opacity: rgba(17, 17, 17,0.9);
+
+  --jt-color-text: #EFEFEF;
+  --jt-color-text-light-1: #616161;
+  --jt-color-text-light-2: #262626;
+
+  // --jt-color-accent: #e6493e;
+  // --jt-color-accent-light-1: #fc6b61;
+  --jt-color-accent-dark-1: #155c51;
+  // --jt-color-accent-dark-2: #92241c;
 }
 
 a {
@@ -71,6 +92,14 @@ p {
 
 .collapse + footer {
   margin-top: 0;
+}
+
+.little-dev-joke {
+  color: var(--jt-color-text-light-1);
+}
+
+.highlight {
+  color: var(--jt-color-accent);
 }
 
 

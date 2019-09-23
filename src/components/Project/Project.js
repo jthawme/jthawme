@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { useStaticQuery } from 'gatsby';
 import classNames from 'classnames';
 import YouTube from 'react-youtube';
 
 import HoverLink from '../Common/HoverLink/HoverLink';
+import JTImage from '../Common/Image/Image';
 
 import styles from './Project.module.scss';
 
@@ -24,10 +26,15 @@ const Block = ({ className, children, desktopSpan = '1 / span 12', tabletSpan = 
   return <div className={cls} style={style}>{ children }</div>;
 }
 
-const ImageBlock = ({ src, alt="", ...props }) => {
+const ImageBlock = ({ src, alt="", width, height, bgColor, ...props }) => {
   return (
     <Block className={styles.blockImage} {...props}>
-      <img src={src} alt={alt}/>
+      <JTImage
+        bgColor={bgColor}
+        width={width}
+        height={height}
+        src={src}
+        alt={alt}/>
     </Block>
   )
 };
@@ -55,7 +62,34 @@ const EmbedBlock = ({ videoId, ...props }) => {
   )
 };
 
+const imageQuery = graphql`
+  {
+    file(extension: { eq: "jpg" }) {
+      colors {
+        vibrant
+        darkVibrant
+        lightVibrant
+        muted
+        darkMuted
+        lightMuted
+      }
+      childImageSharp {
+        id
+        fixed(quality: 100, width: 950) {
+          width
+          height
+          src
+          srcSet
+          srcWebp
+        }
+      }
+    }
+  }
+`
+
 const Project = () => {
+  const imageData = useStaticQuery(imageQuery)
+
   return (
     <main className={"page"}>
       <h1 className={styles.title}>Play</h1>
@@ -69,21 +103,22 @@ const Project = () => {
       </div>
       <div className={styles.content}>
         <ImageBlock
-          src={img}/>
+          bgColor={imageData.file.colors.vibrant}
+          {...imageData.file.childImageSharp.fixed}/>
         <TextBlock
           desktopSpan="2 / span 5"
           />
         <ImageBlock
-          alt="Test"
-          src={img}
+          bgColor={imageData.file.colors.vibrant}
+          {...imageData.file.childImageSharp.fixed}
           desktopSpan="8 / span 4"/>
         <ImageBlock
-          alt="Test"
-          src={img}
+          bgColor={imageData.file.colors.vibrant}
+          {...imageData.file.childImageSharp.fixed}
           desktopSpan="1 / span 7"/>
         <ImageBlock
-          alt="Test"
-          src={img}
+          bgColor={imageData.file.colors.vibrant}
+          {...imageData.file.childImageSharp.fixed}
           desktopSpan="10 / span 3"/>
         <EmbedBlock
           videoId={'ka8wUBGli6A'}/>

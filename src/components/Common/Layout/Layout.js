@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Link } from 'gatsby';
+import classNames from 'classnames';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -13,7 +14,13 @@ import styles from "./Layout.module.scss"
 
 import logoImg from "../../../images/logo.png";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
+  const bodyCls = classNames(
+    `page-${location.pathname.split('/').pop()}`
+  );
+
+  document.body.setAttribute('class', bodyCls);
+
   return (
     <ScrollReact>
       {

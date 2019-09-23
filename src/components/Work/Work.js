@@ -3,8 +3,7 @@ import React from 'react';
 // import classNames from 'classnames';
 import Title from '../Common/Title/Title';
 import Row from '../Common/Row/Row';
-import BigList from '../Common/BigList/BigList';
-import BigListItem from '../Common/BigList/BigListItem';
+import WorkList from '../Work/WorkList';
 
 // import styles from './Work.module.scss';
 
@@ -13,29 +12,11 @@ const Work = () => {
     <main className={"page"}>
       <Row
         title={<Title>Work</Title>}>
-        <BigList>
-          <BigListItem
-            to={"/work"}
-            text="Play"
-            label="Installation"/>
-          <BigListItem
-            to={"/work"}
-            text="Drum Generates"
-            label="Generative Posters"/>
-        </BigList>
+        <WorkList/>
       </Row>
       <Row
         title={<Title>Experiments</Title>}>
-        <BigList>
-          <BigListItem
-            to={"/work"}
-            text="Play"
-            label="Installation"/>
-          <BigListItem
-            to={"/work"}
-            text="Drum Generates"
-            label="Generative Posters"/>
-        </BigList>
+        <WorkList/>
       </Row>
     </main>
   )

@@ -1,7 +1,7 @@
 @import '../../styles/base';
 
 .wrapper {
-  background-color: var(--jt-color-text-light-2);
+  background-color: var(--jt-bg-off);
 }
 
 .things {
@@ -87,13 +87,35 @@
     grid-column-gap: calc(var(--jt-padding) * 2);
   }
 
-  @include breakpoint(tablet) {
+  @include breakpointSize(950px) {
+    padding: calc(var(--jt-padding) * 2) calc(var(--jt-padding) * 4);
+
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: calc(var(--jt-padding) * 5);
+  }
+
+  @include breakpointSize(1280px) {
+    padding: calc(var(--jt-padding) * 2) calc(var(--jt-padding) * 4);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: calc(var(--jt-padding) * 5);
+  }
+
+  .item {
+    opacity: 0.2;
   }
 }
 
 
 .item {
   margin-bottom: calc(var(--jt-padding) * 5);
+
+  transition: {
+    duration: 0.3s;
+    property: opacity;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }

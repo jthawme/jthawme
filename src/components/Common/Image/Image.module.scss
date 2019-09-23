@@ -1,0 +1,23 @@
+.image {
+  position: relative;
+
+  overflow: hidden;
+
+  img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+
+    transition: {
+      duration: 0.3s;
+      property: opacity
+    }
+  }
+}
+
+.show img {
+  opacity: 1;
+}

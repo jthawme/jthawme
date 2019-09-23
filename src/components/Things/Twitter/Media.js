@@ -1,9 +1,10 @@
 import React from 'react';
 
+import JTImage from '../../Common/Image/Image';
 import styles from './Media.module.scss';
 
 const MediaItem = (props) => {
-  const { type, video_info, media_url_https } = props;
+  const { type, video_info, media_url_https, sizes } = props;
   const getVideoUrl = (variants) => {
     const _arr = variants.reverse();
 
@@ -23,7 +24,11 @@ const MediaItem = (props) => {
     case 'photo':
       return (
         <div className={styles.item}>
-          <img alt="" src={media_url_https}/>
+          <JTImage
+            alt=""
+            src={media_url_https}
+            width={sizes.large.w}
+            height={sizes.large.h}/>
         </div>
       );
     default:
