@@ -1,0 +1,41 @@
+title: Play
+description: |
+  A table of instruments designed for anyone to make a song they could be proud of. Designed from the same school of thought as things like tonepads, these _instruments_ were able to let anyone (musically skilled or not) create a melody, a drum backing, a bass line and to choose the sounds on the _mixer_.
+
+  All the instruments were in the same key and could not go outside of it, which allowed any arrangement to sound like it worked. Users could then print their song out, for a unique keepsake.
+content:
+  - type: image
+    file: ../assets/projects/play/hand-table.jpg
+    alt: Hands playing with the project, close up
+  - type: text
+    desktopSpan: 2 / span 5
+    text: |
+      The lego bricks were the drum sequencer, the guess who was the melody/synthesizer, the paper and pens was the bassline (GET IT!) and the scrabble was the mixer.
+
+      All of these controllers were processed by a webcam above, and ran through processing to create their output.
+  - type: image
+    file: ../assets/projects/play/camera-ceiling.jpg
+    alt: Fixing the computer vision camera to the ceiling
+    desktopSpan: 8 / span 4
+  - type: image
+    file: ../assets/projects/play/screenprinting.jpg
+    alt: Screen printing custom guess who cards
+  - type: image
+    file: ../assets/projects/play/custom-cards.jpg
+    alt: Prints drying
+  - type: image
+    file: ../assets/projects/play/in-use.jpg
+    alt: People using the project
+  - type: image
+    file: ../assets/projects/play/finished-table.jpg
+    alt: The finished table displaying all the toys
+  - type: text
+    text: |
+      The face that little printer generates really helped the randomly generated personal string that the project created.
+
+      That little guy is just so darn happy.
+  - type: image
+    file: ../assets/projects/play/receipt.jpg
+    alt: An example of the receipt that gets printed
+  - type: embed
+    src: ka8wUBGli6A
