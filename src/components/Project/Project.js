@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { useStaticQuery } from 'gatsby';
 import classNames from 'classnames';
 import YouTube from 'react-youtube';
+import Markdown from 'react-markdown';
 
 import HoverLink from '../Common/HoverLink/HoverLink';
 import JTImage from '../Common/Image/Image';
@@ -11,16 +11,16 @@ import styles from './Project.module.scss';
 
 import img from '../../images/project.jpg';
 
-const Block = ({ className, children, desktopSpan = '1 / span 12', tabletSpan = '1 / span 6', mobileSpan = '1 / span 4' }) => {
+const Block = ({ className, children, desktopSpan, tabletSpan, mobileSpan = '1 / span 4' }) => {
   const cls = classNames(
     styles.block,
     className
   );
 
   const style = {
-    '--desktop-span': desktopSpan,
-    '--tablet-span': tabletSpan,
-    '--mobile-span': mobileSpan,
+    '--desktop-span': desktopSpan || '1 / span 12',
+    '--tablet-span': tabletSpan || '1 / span 6',
+    '--mobile-span': mobileSpan || '1 / span 4',
   };
 
   return <div className={cls} style={style}>{ children }</div>;
@@ -62,66 +62,45 @@ const EmbedBlock = ({ videoId, ...props }) => {
   )
 };
 
-const imageQuery = graphql`
-  {
-    file(extension: { eq: "jpg" }) {
-      colors {
-        vibrant
-        darkVibrant
-        lightVibrant
-        muted
-        darkMuted
-        lightMuted
-      }
-      childImageSharp {
-        id
-        fixed(quality: 100, width: 950) {
-          width
-          height
-          src
-          srcSet
-          srcWebp
-        }
-      }
-    }
+const renderBlocks = ({ type, alt, file, text, src, desktopSpan }, idx) => {
+  switch (type) {
+    case 'image':
+      return (
+        <ImageBlock
+          key={ idx }
+          alt={ alt }
+          bgColor={ file.colors.vibrant }
+          desktopSpan={ desktopSpan }
+          { ...file.image.fixed }/>
+      );
+    case 'text':
+      return (
+        <TextBlock
+          key={ idx }
+          content={ text }
+          desktopSpan={ desktopSpan }/>
+      );
+    case 'embed':
+      return (
+        <EmbedBlock
+          key={ idx }
+          videoId={ src }
+          desktopSpan={ desktopSpan }/>
+      );
+    default:
+      return null;
   }
-`
+}
 
-const Project = () => {
-  const imageData = useStaticQuery(imageQuery)
-
+const Project = ({ title, description, content }) => {
   return (
     <main className={"page"}>
-      <h1 className={styles.title}>Play</h1>
-      <div className={styles.description}>
-        <p className="large">
-          A table of instruments designed for anyone to make a song they could be proud of. Designed from the same school of thought as things like tonepads, these <em>instruments</em> were able to let anyone (musically skilled or not) create a melody, a drum backing, a bass line and to choose the sounds on the <em>mixer</em>.
-        </p>
-        <p className="large">
-          All the instruments were in the same key and could not go outside of it, which allowed any arrangement to sound like it worked. Users could then print their song out, for a unique keepsake.
-        </p>
+      <h1 className={styles.title}>{ title }</h1>
+      <div className={`${styles.description} large-container`}>
+        <Markdown source={description}/>
       </div>
       <div className={styles.content}>
-        <ImageBlock
-          bgColor={imageData.file.colors.vibrant}
-          {...imageData.file.childImageSharp.fixed}/>
-        <TextBlock
-          desktopSpan="2 / span 5"
-          />
-        <ImageBlock
-          bgColor={imageData.file.colors.vibrant}
-          {...imageData.file.childImageSharp.fixed}
-          desktopSpan="8 / span 4"/>
-        <ImageBlock
-          bgColor={imageData.file.colors.vibrant}
-          {...imageData.file.childImageSharp.fixed}
-          desktopSpan="1 / span 7"/>
-        <ImageBlock
-          bgColor={imageData.file.colors.vibrant}
-          {...imageData.file.childImageSharp.fixed}
-          desktopSpan="10 / span 3"/>
-        <EmbedBlock
-          videoId={'ka8wUBGli6A'}/>
+        { content.map(renderBlocks) }
       </div>
       <div className={styles.footer}>
         <HoverLink

@@ -12,11 +12,11 @@ const Work = () => {
     <main className={"page"}>
       <Row
         title={<Title>Work</Title>}>
-        <WorkList/>
+        <WorkList category="work"/>
       </Row>
       <Row
         title={<Title>Experiments</Title>}>
-        <WorkList/>
+        <WorkList category="experiment"/>
       </Row>
     </main>
   )

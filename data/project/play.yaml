@@ -1,4 +1,7 @@
 title: Play
+image: ../assets/projects/play/hand-table.jpg
+type: Installation
+category: work
 description: |
   A table of instruments designed for anyone to make a song they could be proud of. Designed from the same school of thought as things like tonepads, these _instruments_ were able to let anyone (musically skilled or not) create a melody, a drum backing, a bass line and to choose the sounds on the _mixer_.
 
@@ -8,7 +11,7 @@ content:
     file: ../assets/projects/play/hand-table.jpg
     alt: Hands playing with the project, close up
   - type: text
-    desktopSpan: 2 / span 5
+    desktopSpan: 1 / span 5
     text: |
       The lego bricks were the drum sequencer, the guess who was the melody/synthesizer, the paper and pens was the bassline (GET IT!) and the scrabble was the mixer.
 
@@ -20,16 +23,21 @@ content:
   - type: image
     file: ../assets/projects/play/screenprinting.jpg
     alt: Screen printing custom guess who cards
+    desktopSpan: 2 / span 4
   - type: image
     file: ../assets/projects/play/custom-cards.jpg
     alt: Prints drying
+    desktopSpan: 6 / span 7
   - type: image
     file: ../assets/projects/play/in-use.jpg
     alt: People using the project
+    desktopSpan: 1 / span 4
   - type: image
     file: ../assets/projects/play/finished-table.jpg
     alt: The finished table displaying all the toys
+    desktopSpan: 3 / span 10
   - type: text
+    desktopSpan: 1 / span 5
     text: |
       The face that little printer generates really helped the randomly generated personal string that the project created.
 
@@ -37,5 +45,6 @@ content:
   - type: image
     file: ../assets/projects/play/receipt.jpg
     alt: An example of the receipt that gets printed
+    desktopSpan: 8 / span 5
   - type: embed
     src: ka8wUBGli6A

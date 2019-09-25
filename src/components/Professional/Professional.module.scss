@@ -1,0 +1,17 @@
+.colList {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-size: var(--jt-type-size-3);
+    line-height: var(--jt-type-lh-3);
+
+    // margin: 0 0 var(--jt-type-lh-3);
+  }
+}

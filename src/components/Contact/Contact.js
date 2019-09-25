@@ -12,10 +12,10 @@ const About = () => {
       <Row
         title={<Title>Contact</Title>}>
         <>
-          <p class="large">
+          <p className="large">
             If you think you'd like to work with me I'd love to hear your idea. Or if you have anything else to say get in touch too, like music for instance, if you want to talk music lets talk music.
           </p>
-          <p class="large">
+          <p className="large">
             <a href="mailto:hi@jthaw.me">hi@jthaw.me</a><br/>
             <a href="https://twitter.com/jthawme" target="_blank" rel="noreferrer noopener">@jthawme</a>
           </p>

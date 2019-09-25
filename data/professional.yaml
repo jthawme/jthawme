@@ -1,0 +1,51 @@
+clients:
+  - Amazon
+  - Dropbox
+  - Google
+  - Virgin Records
+  - Youtube
+  - Save the Children
+  - KFC
+  - British Fashion Council
+  - Samsung
+  - Tate Modern
+  - Burnt Mill Brewery
+experience:
+  - title: UAL
+    subtitle: Web & Creative Code Specialist Technician
+    date: Dec 18 - Nov 19
+  - title: Toaster
+    subtitle: Senior Developer & Creative Technologist
+    date: Dec 15 - Nov 18
+  - title: She Was Only
+    subtitle: Lead Developer
+    date: May 13 - Dec 15
+noteworthy:
+  - title: Product Hunt top product
+    subtitle: Stacc
+    info: An Electron app side project
+    date: Jun 19
+  - title: Work exhibited at Google I/O extended
+    subtitle: aispy.io
+    info: Work displayed in association with the main event
+    date: May 18
+  - title: Artist Residency
+    subtitle: Music Hackspace @ Somerset House
+    info: Successfully chosen to be this studios artist in residence
+    date: Jul 18 - Present
+  - title: Organiser of PWA London
+    subtitle: Tech meetup
+    info: First meetup in London about PWAs
+    date: Apr 16 - Dec 18
+  - title: Screen Printing Studio
+    subtitle: Owner of small run print studio
+    info: St Katherine's Precinct
+    date: Dec 17 - Nov 18
+  - title: Awwwards Honourable Mention
+    subtitle: fullstopnewparagraph.co.uk
+    info:
+    date: Jan 15
+  - title: RSA Awards Finalist
+    subtitle: Redonate
+    info:
+    date: May 14

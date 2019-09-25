@@ -12,7 +12,10 @@
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: var(--jt-padding);
+  grid-column-gap: var(--jt-padding);
+  grid-row-gap: calc(var(--jt-padding) * 4);
+
+  margin-top: calc(var(--jt-padding) * 4);
 
   @include breakpoint(tablet) {
     grid-template-columns: repeat(6, 1fr);
