@@ -4,9 +4,12 @@ import classNames from 'classnames';
 
 import styles from './Row.module.scss';
 
-const Row = ({ className, title, children, footer }) => {
+const Row = ({ className, title, children, footer, noMargin = false }) => {
   const cls = classNames(
     styles.row,
+    {
+      [styles.noMargin]: noMargin
+    },
     className
   );
 
@@ -14,7 +17,9 @@ const Row = ({ className, title, children, footer }) => {
     <section className={cls}>
       { title }
       { children }
-      <div className={styles.footer}>{ footer }</div>
+      { footer ? (
+        <div className={styles.footer}>{ footer }</div>
+      ) : null }
     </section>
   )
 }

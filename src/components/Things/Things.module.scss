@@ -100,22 +100,22 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: calc(var(--jt-padding) * 5);
   }
-
-  .item {
-    opacity: 0.2;
-  }
 }
 
 
 .item {
   margin-bottom: calc(var(--jt-padding) * 5);
 
-  transition: {
-    duration: 0.3s;
-    property: opacity;
-  }
+  @include breakpoint(tablet) {
+    opacity: 0.2;
 
-  &:hover {
-    opacity: 1;
+    transition: {
+      duration: 0.3s;
+      property: opacity;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }

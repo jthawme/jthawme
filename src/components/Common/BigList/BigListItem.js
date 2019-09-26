@@ -6,17 +6,30 @@ import HoverLink from '../HoverLink/HoverLink';
 
 import styles from './BigList.module.scss';
 
-const BigListItem = ({ className, to, label, text, image }) => {
+const BigListItem = ({ className, to, label, text, image, vertical = false, children }) => {
   const cls = classNames(
     styles.item,
+    {
+      [styles.vertical]: vertical
+    },
+    {
+      [styles.noLink]: !to
+    },
     className
   );
 
   return (
     <li className={cls}>
-      <HoverLink to={to} image={image}>
+      <HoverLink className={styles.desc} to={to} image={image}>
         <span className={styles.text}>{ text }</span>
-        <span className={styles.label}>{ label }</span>
+        { label ? <span className={styles.label}>{ label }</span> : null }
+        {
+          children ? (
+            <>
+              { children }
+            </>
+          ) : null
+        }
       </HoverLink>
     </li>
   );

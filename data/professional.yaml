@@ -1,51 +1,67 @@
 clients:
   - Amazon
+  - British Fashion Council
+  - Burnt Mill Brewery
   - Dropbox
   - Google
-  - Virgin Records
-  - Youtube
-  - Save the Children
   - KFC
-  - British Fashion Council
+  - Save the Children
   - Samsung
   - Tate Modern
-  - Burnt Mill Brewery
+  - Virgin Records
+  - Youtube
 experience:
   - title: UAL
     subtitle: Web & Creative Code Specialist Technician
     date: Dec 18 - Nov 19
+
   - title: Toaster
     subtitle: Senior Developer & Creative Technologist
     date: Dec 15 - Nov 18
+
   - title: She Was Only
     subtitle: Lead Developer
     date: May 13 - Dec 15
+
 noteworthy:
   - title: Product Hunt top product
     subtitle: Stacc
     info: An Electron app side project
     date: Jun 19
+    file: ./assets/noteworthy/stacc.jpg
+
   - title: Work exhibited at Google I/O extended
     subtitle: aispy.io
     info: Work displayed in association with the main event
     date: May 18
+    file: ./assets/noteworthy/ai-spy.png
+
   - title: Artist Residency
     subtitle: Music Hackspace @ Somerset House
     info: Successfully chosen to be this studios artist in residence
     date: Jul 18 - Present
+    file: ./assets/noteworthy/music-hackspace.jpg
+
   - title: Organiser of PWA London
     subtitle: Tech meetup
     info: First meetup in London about PWAs
     date: Apr 16 - Dec 18
+    file: ./assets/noteworthy/pwa-london.jpg
+
   - title: Screen Printing Studio
     subtitle: Owner of small run print studio
     info: St Katherine's Precinct
     date: Dec 17 - Nov 18
+    file: ./assets/noteworthy/screen-printing.jpg
+
   - title: Awwwards Honourable Mention
     subtitle: fullstopnewparagraph.co.uk
     info:
     date: Jan 15
+    file: ./assets/noteworthy/fsnp.png
+
   - title: RSA Awards Finalist
     subtitle: Redonate
     info:
     date: May 14
+    file: ./assets/noteworthy/redonate.png

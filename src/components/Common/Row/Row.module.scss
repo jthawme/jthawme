@@ -1,5 +1,9 @@
 .row {
-  margin-bottom: calc(var(--jt-padding) * 3);
+  margin-bottom: calc(var(--jt-type-lh-3) * 3);
+
+  &.noMargin {
+    margin-bottom: 0;
+  }
 }
 
 .title {
