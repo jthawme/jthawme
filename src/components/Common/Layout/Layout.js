@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 import { Link } from 'gatsby';
 import classNames from 'classnames';
 
+import PageTransition from "../Transitions/PageTransition";
+
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ScrollReact from "../ScrollReact";
@@ -34,7 +36,9 @@ const Layout = ({ children, location }) => {
 
             <BgImage className={styles.bg} />
 
-            {children}
+            <PageTransition>
+              { children }
+            </PageTransition>
 
             <Footer className={styles.footer}/>
           </>

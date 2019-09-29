@@ -82,9 +82,13 @@ class ScrollReact extends React.Component {
     this.delta = delta;
     this.commitY = this.lastY;
 
-    this.setState(state, () => {
+    if (this.state.direction !== state.direction || this.state.pinned !== state.pinned) {
+      this.setState(state, () => {
+        this.ticking = false;
+      });
+    } else {
       this.ticking = false;
-    });
+    }
   }
 
   render() {

@@ -82,19 +82,19 @@
 
   padding: calc(var(--jt-padding) * 2);
 
-  @include breakpoint(mobile) {
+  @include breakpoint(tablet) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: calc(var(--jt-padding) * 2);
   }
 
-  @include breakpointSize(950px) {
+  @include breakpointSize(1280px) {
     padding: calc(var(--jt-padding) * 2) calc(var(--jt-padding) * 4);
 
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: calc(var(--jt-padding) * 5);
   }
 
-  @include breakpointSize(1280px) {
+  @include breakpointSize(1440px) {
     padding: calc(var(--jt-padding) * 2) calc(var(--jt-padding) * 4);
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -107,7 +107,7 @@
   margin-bottom: calc(var(--jt-padding) * 5);
 
   @include breakpoint(tablet) {
-    opacity: 0.2;
+    opacity: 0.4;
 
     transition: {
       duration: 0.3s;

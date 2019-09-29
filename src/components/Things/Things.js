@@ -25,39 +25,6 @@ const Attribution = ({ text, onShuffle, fullscreen }) => {
   );
 }
 
-const THINGS = [
-  {
-    source: 'iframe',
-    src: 'https://jt-sketches.netlify.com/009/',
-    label: 'Daily Sketch #009'
-  },
-  {
-    source: 'iframe',
-    src: 'https://jt-sketches.netlify.com/015/',
-    label: 'Daily Sketch #015'
-  },
-  {
-    source: 'iframe',
-    src: 'https://jt-sketches.netlify.com/021/',
-    label: 'Daily Sketch #021'
-  },
-  {
-    source: 'iframe',
-    src: 'https://jt-sketches.netlify.com/039/',
-    label: 'Daily Sketch #039'
-  },
-  {
-    source: 'iframe',
-    src: 'https://jt-sketches.netlify.com/040/',
-    label: 'Daily Sketch #040'
-  },
-  {
-    source: 'iframe',
-    src: 'https://jt-sketches.netlify.com/041/',
-    label: 'Daily Sketch #041'
-  }
-];
-
 class Things extends React.Component {
   constructor(props) {
     super(props);
@@ -66,7 +33,7 @@ class Things extends React.Component {
       fullscreen: true,
       show: false,
       animate: false,
-      info: this.randomThing(THINGS, true),
+      info: this.randomThing(props.sketches, true),
       data: []
     };
 
@@ -99,7 +66,7 @@ class Things extends React.Component {
 
   randomThing = (things, init) => {
     const _things = things.filter(t => {
-      return init || (t.label !== this.state.info.label)
+      return init || (t.text !== this.state.info.text)
     });
 
     return _things[Math.floor(Math.random() * _things.length)];
@@ -107,8 +74,9 @@ class Things extends React.Component {
 
   onShuffle = () => {
     const onTransitionEnd = () => {
+      console.log(this.props, this.props.sketches);
       this.setState({
-        info: this.randomThing(THINGS)
+        info: this.randomThing(this.props.sketches)
       }, () => {
         this.timer = setTimeout(() => {
           this.setState({
@@ -143,15 +111,15 @@ class Things extends React.Component {
   displayColumns(data) {
     let columns = 1;
 
-    if (window.matchMedia('(min-width: 500px').matches) {
+    if (window.matchMedia('(min-width: 768px').matches) {
       columns = 2;
     }
 
-    if (window.matchMedia('(min-width: 950px').matches) {
+    if (window.matchMedia('(min-width: 1280px').matches) {
       columns = 3;
     }
 
-    if (window.matchMedia('(min-width: 1280px').matches) {
+    if (window.matchMedia('(min-width: 1440px').matches) {
       columns = 4;
     }
 
@@ -185,11 +153,11 @@ class Things extends React.Component {
     return (
       <div className={`${styles.wrapper} collapse`}>
         <main className={cls} ref={this.mainRef}>
-          <iframe title={info.label} className={styles.iframe} src={info.src} frameBorder="0"></iframe>
+          <iframe title={info.text} className={styles.iframe} src={info.url} frameBorder="0" allow="camera; microphone"></iframe>
 
           <Attribution
             fullscreen
-            text={info.label}
+            text={info.text}
             onShuffle={this.onShuffle}/>
         </main>
         <section className={styles.pool}>
