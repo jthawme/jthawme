@@ -42,12 +42,7 @@ const ImageBlock = ({ src, alt="", width, height, bgColor, ...props }) => {
 const TextBlock = ({ content, ...props }) => {
   return (
     <Block className={styles.blockText} {...props}>
-      <p>
-        The lego bricks were the drum sequencer, the guess who was the melody/synthesizer, the paper and pens was the bass<em>line</em> (GET IT!) and the scrabble was the mixer.
-      </p>
-      <p>
-        All of these controllers were processed by a webcam above, and ran through processing to create their output.
-      </p>
+      <Markdown source={content}/>
     </Block>
   )
 };

@@ -1,0 +1,40 @@
+title: Friends of Kerouac
+image: ../assets/projects/friends-of-kerouac/dark-mode.jpg
+type: Website
+category: work
+description: |
+  The site acts as a visual compendium to the characters and subsequent people that made up the Beat Generation in Kerouac's books and in real life.
+
+  It removes to facade of the psuedonym's for each individual book while also acting as a tool to piece together Kerouac's group of friends over the years of his works.
+
+  [friendsofkerouac.com](https://friendsofkerouac.com)
+content:
+  - type: image
+    file: ../assets/projects/friends-of-kerouac/desktop1.jpg
+    alt: Desktop view of the website's homepage
+  - type: text
+    text: |
+      Leveraging newer technologies and libraries allowed the project to have a design that I felt honoured the spontaneity of Kerouac, while also playing homage to the format of books in which his work was laid.
+
+      Using gatsby allowed this content heavy site to run smoothly and also utilising CSS grid and custom properties gave me more flexibity to play with more print like layouts than ever before.
+    desktopSpan: 1 / span 5
+  - type: image
+    file: ../assets/projects/friends-of-kerouac/mobile.jpg
+    alt: Mobile view of the landing page
+    desktopSpan: 9 / span 4
+  - type: image
+    file: ../assets/projects/friends-of-kerouac/profile.jpg
+    alt: Screenshot of the profile page. Fully justified
+    desktopSpan: 1 / span 10
+  - type: image
+    file: ../assets/projects/friends-of-kerouac/search.jpg
+    alt: Full screen search
+    desktopSpan: 6 / span 5
+  - type: image
+    file: ../assets/projects/friends-of-kerouac/dark-mode.jpg
+    alt: Dark mode with custom properties
+    desktopSpan: 3 / span 10
+  - type: image
+    file: ../assets/projects/friends-of-kerouac/credits.jpg
+    alt: Quote "My fault, my failure, is not in the passions I have, but in my lack of control of them"
+    desktopSpan: 1 / span 8

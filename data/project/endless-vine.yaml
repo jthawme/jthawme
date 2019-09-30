@@ -1,0 +1,24 @@
+title: Endless Vine
+image: ../assets/projects/endless-vine/desktop.jpg
+type: Web App
+category: experiment
+description: |
+  Endless Vine is a site to enhance your time wasting abilities. Watch a constant stream of the most popular vines (decide in the settings how popular or rare you want).
+
+  [endlessvine.co](https://endlessvine.co)
+content:
+  - type: image
+    file: ../assets/projects/endless-vine/desktop.jpg
+    alt: Desktop view of the app
+  - type: image
+    file: ../assets/projects/endless-vine/settings.jpg
+    alt: Minimal settings to use
+    desktopSpan: 3 / span 8
+  - type: image
+    file: ../assets/projects/endless-vine/mobile.jpg
+    alt: Responsive design
+    desktopSpan: 8 / span 4
+  - type: image
+    file: ../assets/projects/endless-vine/cinema.jpg
+    alt: Full screen black out viewing experience
+    desktopSpan: 1 / span 7
