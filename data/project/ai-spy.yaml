@@ -1,0 +1,45 @@
+title: AI Spy
+image: ../assets/projects/ai-spy/desktop1.png
+type: Web App
+category: work
+description: |
+  AI Spy is a little web app taking full advantage of the Google Cloud Vision API to create something incredibly dumb.
+
+  Its a progressive experience in the fact that it works on both Android and iOS however with android you get photos straight from the camera, speech synthesis (so you can play with a virtual friend <3) and the power of service worker, while on iOS the app is still fully functional for its MVP.
+
+  [aispy.io](https://aispy.io)
+content:
+  - type: image
+    file: ../assets/projects/ai-spy/desktop1.png
+    alt: Desktop view of the app
+  # - type: image
+  #   file: ../assets/projects/ai-spy/animate.gif
+  #   alt: Small run through of the game
+  - type: image
+    file: ../assets/projects/ai-spy/mobile1.png
+    alt: Mobile view of the landing page
+    desktopSpan: 1 / span 4
+  - type: image
+    file: ../assets/projects/ai-spy/mobile2.png
+    alt: Another mobile screenshot
+    desktopSpan: 7 / span 6
+  - type: text
+    text: |
+      The project uses the power of a progressive web app, to also deliver good UX decisions like allowing the site to load offline, but informing you that it needs a connection to work.
+
+      This small decision allows good interaction, instead of leaving people in the dark.
+    desktopSpan: 2 / span 5
+  - type: image
+    file: ../assets/projects/ai-spy/offline.png
+    alt: Offline message from the app
+    desktopSpan: 9 / span 4
+  - type: image
+    file: ../assets/projects/ai-spy/desktop2.png
+    alt: The finished page when playing on desktop
+    desktopSpan: 1 / span 6
+  - type: text
+    text: |
+      The camera captures the images from around the room, which pings it off to the Google Cloud Vision api, returning a set of labels that it reckons it finds in the images, which is perfect for a little game of I Spy.
+
+      It was a no brainer.
+    desktopSpan: 8 / span 4
