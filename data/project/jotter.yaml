@@ -1,0 +1,36 @@
+title: Jotter
+image: ../assets/projects/jotter/moodboard.jpg
+type: Website
+category: work
+description: |
+  My longest running self initiated project, Jotter. Jotter is an online notebook, where you can store things you see or think of for you to be able to check at anytime. It can be categorised and it can be searched, its an efficient means of organising your thoughts. The difference with Jotter is that it has no front end element to it. It acts like a streamlined blog but the one thing you don't have to worry about is anyone seeing it, so you don't have to vet your ideas, you don't have to think about how to word things, everything you do is for you.
+
+  _I am waiting for the cheque from Pinterest_
+content:
+  - type: image
+    file: ../assets/projects/jotter/moodboard.jpg
+    alt: Moodboard
+    desktopSpan: 4 / span 9
+  - type: image
+    file: ../assets/projects/jotter/bookmarklet.jpg
+    alt: Picture of the accompanying bookmarklet
+    desktopSpan: 1 / span 6
+  - type: text
+    desktopSpan: 1 / span 3
+    text: |
+      Originally made for myself to go to university, it was a way to collect valuable inspiration for me to refer back to. Having a place to store creative, visual ideas didn't exist like this at the time, so was invaluable
+  - type: image
+    file: ../assets/projects/jotter/display.jpg
+    alt: The front end display portion
+    desktopSpan: 5 / span 9
+  - type: image
+    file: ../assets/projects/jotter/calendar.jpg
+    alt: A built in calendar
+    desktopSpan: 7 / span 5
+  - type: embed
+    src: yPlo1JJShR0
+    desktopSpan: 1 / span 8
+  - type: text
+    desktopSpan: 10 / span 3
+    text: |
+      This was part of a series of help videos I created for people to use on the site

@@ -14,7 +14,7 @@ export default ThingsPage
 
 export const query = graphql`
   query {
-    content: dataYaml(fields: {slug: {eq: "things"}}) {
+    content: dataYaml(fields: {slug: {eq: "misc"}}) {
       sketches {
         url
         text

@@ -76,3 +76,28 @@ sketches:
 
   - url: https://jt-sketches.netlify.com/046
     text: Daily Sketch 046
+
+me:
+  - image: ./assets/me/001.jpg
+  - image: ./assets/me/002.jpg
+  - image: ./assets/me/003.jpg
+  - image: ./assets/me/004.jpg
+  - image: ./assets/me/005.jpg
+  - image: ./assets/me/006.jpg
+  - image: ./assets/me/007.jpg
+  - image: ./assets/me/008.jpg
+  - image: ./assets/me/009.jpg
+  - image: ./assets/me/010.jpg
+
+travel:
+  - image: ./assets/travel/001.jpg
+  - image: ./assets/travel/002.jpg
+  - image: ./assets/travel/003.jpg
+  - image: ./assets/travel/004.jpg
+  - image: ./assets/travel/005.jpg
+  - image: ./assets/travel/006.jpg
+  - image: ./assets/travel/007.jpg
+  - image: ./assets/travel/008.jpg
+  - image: ./assets/travel/009.jpg
+  - image: ./assets/travel/010.jpg
+  - image: ./assets/travel/011.jpg

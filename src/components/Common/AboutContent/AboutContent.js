@@ -1,15 +1,55 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import LatestTrack from './LatestTrack';
 
 import styles from './AboutContent.module.scss';
+import HoverLink from '../HoverLink/HoverLink';
+
+const query = graphql`
+  query {
+    content: dataYaml(fields: {slug: {eq: "misc"}}) {
+      me {
+        image {
+          childImageSharp {
+            fixed(width: 1000) {
+              src
+            }
+          }
+        }
+      }
+      travel {
+        image {
+          childImageSharp {
+            fixed(width: 1000) {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+const rand = (arr) => {
+  return arr[Math.floor(arr.length * Math.random())];
+}
 
 const AboutContent = ({ small = false }) => {
+  const { content } = useStaticQuery(query);
+
+  const [meImg, setMeImg] = useState(false);
+  const [travelImg, setTravelImg] = useState(false);
+
+  useEffect(() => {
+    setMeImg(rand(content.me));
+    setTravelImg(rand(content.travel));
+  }, []);
+
   return (
     <>
       <p className={styles.paragraph}>
-        <Link to="/about">I am</Link> a full stack developer living in London, but born and raised in the lovely town of Shrewsbury. I am currently looking for contracts across creative coding, web development or installation projects.
+        <HoverLink image={meImg ? meImg.image.childImageSharp.fixed.src : ''} to="/about">I am</HoverLink> a full stack developer living in London, but born and raised in the lovely town of Shrewsbury. I am currently looking for contracts across creative coding, web development or installation projects.
       </p>
       {
         small ? null : (

@@ -1,0 +1,13 @@
+title: Naked Sims
+image: ../assets/projects/naked-sims/bathroom.png
+type: Webcam
+category: experiment
+description: |
+  A stupid project made in a day. Using Posenet I recreate the pixelated effect on the sims, when they were in the shower.
+
+  This is the future Tim Berners-lee imagined
+
+  [nakedsims.surge.sh](https://nakedsims.surge.sh/)
+content:
+  - type: embed
+    src: INGVUmtetG8
