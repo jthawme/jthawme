@@ -7,7 +7,7 @@ import BigListItem from '../Common/BigList/BigListItem';
 
 const query = graphql`
   query {
-    allProjectYaml {
+    work: allProjectYaml(sort: {fields: order}) {
       nodes {
         id
         title
@@ -28,8 +28,8 @@ const query = graphql`
   }
 `;
 
-const WorkList = ({ category = false }) => {
-  const work = useStaticQuery(query).allProjectYaml.nodes;
+const WorkList = ({ category = false, limit = false }) => {
+  const { nodes: work } = useStaticQuery(query).work;
 
   const filterWork = (item) => {
     if (!category) {
@@ -39,16 +39,19 @@ const WorkList = ({ category = false }) => {
     return item.category === category;
   }
 
+  let _limit = limit || work.length;
+
   return (
     <BigList>
       {
-        work.filter(filterWork).map(({ id, title, type, fields, image }) => (
+        work.filter(filterWork).slice(0, _limit).map(({ id, title, type, fields, image }) => (
           <BigListItem
             key={ id }
             to={ fields.slug }
             image={ image.childImageSharp.fixed.src }
             text={ title }
-            label={ type }/>
+            label={ type }
+            noSmallImage/>
         ))
       }
     </BigList>

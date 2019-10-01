@@ -9,9 +9,7 @@ import JTImage from '../Common/Image/Image';
 
 import styles from './Project.module.scss';
 
-import img from '../../images/project.jpg';
-
-const Block = ({ className, children, desktopSpan, tabletSpan, mobileSpan = '1 / span 4' }) => {
+const Block = ({ className, children, desktopSpan, tabletSpan, mobileSpan }) => {
   const cls = classNames(
     styles.block,
     className
@@ -57,7 +55,9 @@ const EmbedBlock = ({ videoId, ...props }) => {
   )
 };
 
-const renderBlocks = ({ type, alt, file, text, src, desktopSpan }, idx) => {
+const renderBlocks = ({ type, alt, file, text, src, desktopSpan, tabletSpan, mobileSpan }, idx) => {
+  const spans = { desktopSpan, tabletSpan, mobileSpan };
+
   switch (type) {
     case 'image':
       return (
@@ -65,7 +65,7 @@ const renderBlocks = ({ type, alt, file, text, src, desktopSpan }, idx) => {
           key={ idx }
           alt={ alt }
           bgColor={ file.colors.vibrant }
-          desktopSpan={ desktopSpan }
+          { ...spans }
           { ...file.image.fixed }/>
       );
     case 'text':
@@ -73,21 +73,23 @@ const renderBlocks = ({ type, alt, file, text, src, desktopSpan }, idx) => {
         <TextBlock
           key={ idx }
           content={ text }
-          desktopSpan={ desktopSpan }/>
+          { ...spans }/>
       );
     case 'embed':
       return (
         <EmbedBlock
           key={ idx }
           videoId={ src }
-          desktopSpan={ desktopSpan }/>
+          { ...spans }/>
       );
     default:
       return null;
   }
 }
 
-const Project = ({ title, description, content }) => {
+const Project = ({ title, description, content, pageContext }) => {
+  const { next, prev } = pageContext;
+
   return (
     <main className={"page"}>
       <h1 className={styles.title}>{ title }</h1>
@@ -98,20 +100,24 @@ const Project = ({ title, description, content }) => {
         { content.map(renderBlocks) }
       </div>
       <div className={styles.footer}>
-        <HoverLink
-          to={'/project'}
-          image={img}
-          className={[styles.footerLeft, styles.footerLink].join(' ')}>
-          <span className={styles.footerLinkTitle}>Previous</span>
-          <span className={styles.footerLinkLabel}>Endless Vine</span>
-        </HoverLink>
-        <HoverLink
-          to={'/project'}
-          image={img}
-          className={[styles.footerRight, styles.footerLink].join(' ')}>
-          <span className={styles.footerLinkTitle}>Next</span>
-          <span className={styles.footerLinkLabel}>Drum Generates</span>
-        </HoverLink>
+        { prev ? (
+          <HoverLink
+            to={prev.slug}
+            image={prev.image}
+            className={[styles.footerLeft, styles.footerLink].join(' ')}>
+            <span className={styles.footerLinkTitle}>Previous</span>
+            <span className={styles.footerLinkLabel}>{ prev.title }</span>
+          </HoverLink>
+        ) : null }
+        { next ? (
+          <HoverLink
+            to={next.slug}
+            image={next.image}
+            className={[styles.footerRight, styles.footerLink].join(' ')}>
+            <span className={styles.footerLinkTitle}>Next</span>
+            <span className={styles.footerLinkLabel}>{ next.title }</span>
+          </HoverLink>
+        ) : null }
       </div>
     </main>
   )

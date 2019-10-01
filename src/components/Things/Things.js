@@ -74,7 +74,6 @@ class Things extends React.Component {
 
   onShuffle = () => {
     const onTransitionEnd = () => {
-      console.log(this.props, this.props.sketches);
       this.setState({
         info: this.randomThing(this.props.sketches)
       }, () => {

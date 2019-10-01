@@ -20,7 +20,9 @@ const Home = () => {
       <Row
         title={<Title>Work</Title>}
         footer={<FancyLink to="/work">View all</FancyLink>}>
-        <WorkList/>
+        <WorkList
+          category="work"
+          limit={5}/>
       </Row>
     </main>
   )

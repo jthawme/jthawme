@@ -2,17 +2,32 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'gatsby';
 
+import classNames from 'classnames';
+
 import { ACTIONS } from '../../../state/createStore';
 
-const HoverLink = ({ children, to, className, image }) => {
+import styles from './HoverLink.module.scss';
+
+const HoverLink = ({ children, to, className, image, noSmallImage = false }) => {
   const dispatch = useDispatch();
 
   const setBg = (img) => {
     dispatch({ type: ACTIONS.SET_BG_IMAGE, value: img });
   };
 
-  const props = {
+  const cls = classNames(
+    styles.link,
+    {
+      [styles.noSmallImage]: noSmallImage
+    },
     className
+  )
+
+  const props = {
+    className: cls,
+    style: {
+      [`--jt-image`]: `url(${image})`
+    }
   };
 
   if (image) {

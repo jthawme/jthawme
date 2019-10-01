@@ -27,11 +27,19 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(`
       query {
-        allProjectYaml {
+        allProjectYaml(sort: {fields: order}) {
           edges {
             node {
+              title
               fields {
                 slug
+              }
+              image {
+                childImageSharp {
+                  fixed(width: 1000) {
+                    src
+                  }
+                }
               }
             }
           }
@@ -40,12 +48,30 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   );
 
-  result.data.allProjectYaml.edges.forEach(({ node }) => {
+  const posts = result.data.allProjectYaml.edges;
+
+  const getAdjacent = index => {
+    if (index < 0 || index >= posts.length) {
+      return null
+    }
+
+    const { title, fields, image } = posts[index].node;
+
+    return {
+      title,
+      slug: fields.slug,
+      image: image.childImageSharp.fixed.src
+    }
+  }
+
+  posts.forEach(({ node }, index) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/pages/project.js`),
       context: {
         slug: node.fields.slug,
+        prev: getAdjacent(index - 1),
+        next: getAdjacent(index + 1)
       },
     })
   })

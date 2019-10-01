@@ -1,3 +1,11 @@
+order:
+  - friends-of-kerouac
+  - ai-spy
+  - drum-generates
+  - play
+  - jotter
+  - redonate
+
 sketches:
   - url: https://jt-sketches.netlify.com/001/
     text: Daily Sketch 001

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { ENTERING, ENTERED, EXITING, EXITED } from 'react-transition-group/Transition';
-
 import Fade from './Fade';
 
 const areDifferentComponents = (el1, el2) => {

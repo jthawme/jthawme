@@ -1,0 +1,32 @@
+@import '../../../styles/base';
+
+.link {
+  position: relative;
+
+  &:not(.noSmallImage):after {
+    position: relative;
+
+    display: inline-block;
+
+    top: rem(4px);
+    left: (5px);
+
+    width: rem(35px);
+    height: rem(24px);
+
+    content: '';
+
+    background: {
+      image: var(--jt-image);
+      repeat: no-repeat;
+      position: center;
+      size: contain;
+    }
+
+    margin-right: 5px;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+}

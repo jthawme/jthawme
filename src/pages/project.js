@@ -5,12 +5,15 @@ import { graphql } from "gatsby";
 import SEO from "../components/Common/seo"
 import Project from "../components/Project/Project";
 
-const ProjectPage = ({ data }) => (
-  <>
-    <SEO title="Project" />
-    <Project {...data.project}/>
-  </>
-)
+const ProjectPage = (props) => {
+  const { data, pageContext } = props;
+  return (
+    <>
+      <SEO title="Project" />
+      <Project {...data.project} pageContext={pageContext}/>
+    </>
+  )
+};
 
 export default ProjectPage
 
@@ -24,6 +27,8 @@ export const query = graphql`
         type
         alt
         desktopSpan
+        tabletSpan
+        mobileSpan
         text
         src
         file {

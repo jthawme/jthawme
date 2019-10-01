@@ -1,3 +1,4 @@
+order: 2
 title: AI Spy
 image: ../assets/projects/ai-spy/desktop1.png
 type: Web App
@@ -19,10 +20,12 @@ content:
     file: ../assets/projects/ai-spy/mobile1.png
     alt: Mobile view of the landing page
     desktopSpan: 1 / span 4
+    tabletSpan: 1 / span 3
   - type: image
     file: ../assets/projects/ai-spy/mobile2.png
     alt: Another mobile screenshot
     desktopSpan: 7 / span 6
+    tabletSpan: 4 / span 3
   - type: text
     text: |
       The project uses the power of a progressive web app, to also deliver good UX decisions like allowing the site to load offline, but informing you that it needs a connection to work.

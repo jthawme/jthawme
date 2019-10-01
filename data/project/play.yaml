@@ -1,3 +1,4 @@
+order: 4
 title: Play
 image: ../assets/projects/play/hand-table.jpg
 type: Installation
@@ -12,6 +13,8 @@ content:
     alt: Hands playing with the project, close up
   - type: text
     desktopSpan: 1 / span 5
+    tabletSpan: 1 / span 3
+    mobileSpan: 1 / span 4
     text: |
       The lego bricks were the drum sequencer, the guess who was the melody/synthesizer, the paper and pens was the bassline (GET IT!) and the scrabble was the mixer.
 
@@ -20,24 +23,29 @@ content:
     file: ../assets/projects/play/camera-ceiling.jpg
     alt: Fixing the computer vision camera to the ceiling
     desktopSpan: 8 / span 4
+    tabletSpan: 4 / span 3
   - type: image
     file: ../assets/projects/play/screenprinting.jpg
     alt: Screen printing custom guess who cards
     desktopSpan: 2 / span 4
+    tabletSpan: 1 / span 2
   - type: image
     file: ../assets/projects/play/custom-cards.jpg
     alt: Prints drying
     desktopSpan: 6 / span 7
+    tabletSpan: 3 / span 2
   - type: image
     file: ../assets/projects/play/in-use.jpg
     alt: People using the project
     desktopSpan: 1 / span 4
+    tabletSpan: 5 / span 2
   - type: image
     file: ../assets/projects/play/finished-table.jpg
     alt: The finished table displaying all the toys
     desktopSpan: 3 / span 10
   - type: text
     desktopSpan: 1 / span 5
+    tabletSpan: 1 / span 3
     text: |
       The face that little printer generates really helped the randomly generated personal string that the project created.
 
@@ -45,6 +53,7 @@ content:
   - type: image
     file: ../assets/projects/play/receipt.jpg
     alt: An example of the receipt that gets printed
+    tabletSpan: 5 / span 2
     desktopSpan: 8 / span 5
   - type: embed
     src: ka8wUBGli6A
