@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 import styles from './Header.module.scss';
 
 import logoImg from '../../../images/logo.png';
+import Logo from '../Logo/Logo';
 
 const Header = ({ className, pinned }) => {
   const [animateState, setAnimateState] = useState(false);
@@ -39,7 +40,7 @@ const Header = ({ className, pinned }) => {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className={styles.image}>
-          <Link to={"/"}><img alt="" src={logoImg}/></Link>
+          <Link to={"/"}><Logo width="40" height="40"/></Link>
         </div>
       </nav>
     </header>
