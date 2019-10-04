@@ -1,6 +1,8 @@
 import React from 'react';
 
 import JTImage from '../../Common/Image/Image';
+import JTVideo from '../../Common/Video/Video';
+
 import styles from './Media.module.scss';
 
 const MediaItem = (props) => {
@@ -18,7 +20,8 @@ const MediaItem = (props) => {
     case 'video':
       return (
         <div className={styles.item}>
-          <video controls loop muted src={getVideoUrl(video_info.variants)}/>
+          <JTVideo
+            src={getVideoUrl(video_info.variants)}/>
         </div>
       );
     case 'photo':

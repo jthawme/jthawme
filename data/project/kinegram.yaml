@@ -1,0 +1,26 @@
+title: Kinegram
+image: ../assets/projects/kinegram/desktop.jpg
+type: Web App
+category: experiment
+description: |
+  Kinegram is a small project to generate... _Kinegrams_. They are this near optical illusions, which can create moving images from pieces of paper. It hides all the frames of a gif in between black bars so that each frame gets revealed when moving the transparency over the top.
+
+  [kinegram.app](https://kinegram.app)
+content:
+  - type: image
+    file: ../assets/projects/kinegram/desktop.jpg
+    alt: Desktop view of the app
+  - type: image
+    file: ../assets/projects/kinegram/info.jpg
+    alt: An info page to give an explanation of what kinegrams are
+  - type: text
+    text: |
+      The site does everything on the front end, generates all of the necessary imagery and packages it in a zip folder and also creates the gif to preview the end result
+  - type: image
+    file: ../assets/projects/kinegram/design.png
+    alt: An info page to give an explanation of what kinegrams are
+  - type: image
+    gif: ../assets/projects/kinegram/pyramid.gif
+    alt: The example that is created from the site
+  - type: embed
+    videoSrc: ../assets/projects/kinegram/in_action.mp4

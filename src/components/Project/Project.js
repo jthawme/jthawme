@@ -6,6 +6,7 @@ import Markdown from 'react-markdown';
 
 import HoverLink from '../Common/HoverLink/HoverLink';
 import JTImage from '../Common/Image/Image';
+import JTVideo from '../Common/Video/Video';
 
 import styles from './Project.module.scss';
 
@@ -45,17 +46,24 @@ const TextBlock = ({ content, ...props }) => {
   )
 };
 
-const EmbedBlock = ({ videoId, ...props }) => {
+const EmbedBlock = ({ youtubeId, videoSrc, ...props }) => {
   return (
     <Block className={styles.blockEmbed} {...props}>
-      <YouTube
-        className={styles.blockEmbedIframe}
-        videoId={videoId}/>
+      { youtubeId && (
+        <YouTube
+          className={styles.blockEmbedIframe}
+          videoId={youtubeId}/>
+      ) }
+      { videoSrc && (
+        <JTVideo
+          className={styles.blockEmbedIframe}
+          src={videoSrc}/>
+      ) }
     </Block>
   )
 };
 
-const renderBlocks = ({ type, alt, file, text, src, desktopSpan, tabletSpan, mobileSpan }, idx) => {
+const renderBlocks = ({ type, alt, file, text, youtubeId, gif, videoSrc, desktopSpan, tabletSpan, mobileSpan }, idx) => {
   const spans = { desktopSpan, tabletSpan, mobileSpan };
 
   switch (type) {
@@ -79,7 +87,8 @@ const renderBlocks = ({ type, alt, file, text, src, desktopSpan, tabletSpan, mob
       return (
         <EmbedBlock
           key={ idx }
-          videoId={ src }
+          youtubeId={ youtubeId }
+          videoSrc={ videoSrc }
           { ...spans }/>
       );
     default:

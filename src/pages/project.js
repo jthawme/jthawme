@@ -30,7 +30,8 @@ export const query = graphql`
         tabletSpan
         mobileSpan
         text
-        src
+        youtubeId
+        videoSrc
         file {
           colors {
             vibrant
@@ -50,6 +51,9 @@ export const query = graphql`
               srcWebp
             }
           }
+        }
+        gif {
+          src
         }
       }
     }
