@@ -15,6 +15,7 @@ import "../../../styles/global.scss";
 import styles from "./Layout.module.scss"
 
 import logoImg from "../../../images/logo.png";
+import Logo from "../Logo/Logo";
 
 const Layout = ({ children, location }) => {
   const bodyCls = classNames(
@@ -31,7 +32,7 @@ const Layout = ({ children, location }) => {
             <Header className={styles.header} {...scrollState}/>
 
             <div className={styles.top}>
-              <Link to={"/"} className={styles.logo}><img alt="" src={logoImg}/></Link>
+              <Link to={"/"} className={styles.logo}><Logo width="64" height="64"/></Link>
             </div>
 
             <BgImage className={styles.bg} />
