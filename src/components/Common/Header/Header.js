@@ -7,6 +7,7 @@ import styles from './Header.module.scss';
 
 // import logoImg from '../../../images/logo.png';
 import Logo from '../Logo/Logo';
+import WobblyText from '../WobblyText/WobblyText';
 
 const Header = ({ className, pinned, invert }) => {
   const [animateState, setAnimateState] = useState(false);
@@ -36,7 +37,7 @@ const Header = ({ className, pinned, invert }) => {
           <li><Link to="/work">Work</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/professional">Professional</Link></li>
-          <li><Link to="/things">Things</Link></li>
+          <li><Link to="/things">Things <WobblyText text="NEW"/></Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className={styles.image}>

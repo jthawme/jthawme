@@ -1,0 +1,36 @@
+@import '../../../styles/base';
+
+.wobbly {
+  position: relative;
+
+  font-size: rem(10px);
+
+  color: rgb(197, 66, 66);
+
+  span {
+    display: inline-block;
+
+    animation: {
+      name: UPDOWN;
+      iteration-count: infinite;
+      duration: 1s;
+    }
+
+    @for $i from 1 through 10 {
+      &:nth-child(10n + #{$i}) {
+        // transform: translate3d(0, 100%, 0);
+        animation-delay: $i * 0.1s;
+      }
+    }
+  }
+}
+
+@keyframes UPDOWN {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -50%, 0);
+  }
+}

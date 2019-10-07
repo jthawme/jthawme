@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Link } from 'gatsby';
-import classNames from 'classnames';
+// import classNames from 'classnames';
 
 import PageTransition from "../Transitions/PageTransition";
 
