@@ -1,0 +1,26 @@
+title: Diaries
+image: ../assets/projects/diaries/front-cover.jpg
+type: Booklets
+category: experiment
+description: |
+  These diaries were made for my 26th birthday. I had an idea to take a bunch of friends that I met in London, back to sleepy old Shrewsbury for my birthday and I made these diaries as a bit of a usual _goof_ but their responses were really nice so I put them online.
+
+  Thanks friends! This turned out to be some of the nicest work I've ever made.
+
+  [diaries.jthaw.me](http://diaries.jthaw.me)
+content:
+  - type: image
+    file: ../assets/projects/diaries/front-cover.jpg
+    alt: Front cover
+  - type: image
+    file: ../assets/projects/diaries/page001.jpg
+    alt: A page from the diary
+    # desktopSpan: 1 / span 6
+  - type: image
+    file: ../assets/projects/diaries/page002.jpg
+    alt: A page from the diary
+    # desktopSpan: 4 / span 9
+  - type: image
+    file: ../assets/projects/diaries/page003.jpg
+    alt: A page from the diary
+    # desktopSpan: 4 / span 9

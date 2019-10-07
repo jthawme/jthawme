@@ -31,7 +31,9 @@ export const query = graphql`
         mobileSpan
         text
         youtubeId
-        videoSrc
+        videoSrc {
+          publicURL
+        }
         file {
           colors {
             vibrant
@@ -53,7 +55,11 @@ export const query = graphql`
           }
         }
         gif {
-          src
+          width
+          height
+          url {
+            publicURL
+          }
         }
       }
     }

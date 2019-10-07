@@ -1,5 +1,5 @@
 const QUARTER_PI = Math.PI * 0.25;
-const HALF_PI = Math.PI * 0.5;
+// const HALF_PI = Math.PI * 0.5;
 const PI = Math.PI;
 const TWO_PI = Math.PI * 2;
 
@@ -127,7 +127,7 @@ const bottomPart = (x, y, width, height) => {
   ctx.restore();
 }
 
-export const generate = (canvas, _ctx, width, height, strokeWidth = STROKE_WIDTH) => {
+export const generate = (canvas, _ctx, width, height, strokeWidth = STROKE_WIDTH, invert = false) => {
   ctx = _ctx;
 
   setDimensions(canvas, ctx, width, height, window.devicePixelRatio);
@@ -143,6 +143,8 @@ export const generate = (canvas, _ctx, width, height, strokeWidth = STROKE_WIDTH
 
   ctx.save();
   ctx.lineWidth = strokeWidth;
+  ctx.fillStyle = invert ? 'white' : '#111111';
+  ctx.strokeStyle = invert ? 'white' : '#111111';
 
   // Move into the clipped zone
   ctx.translate(strokeWidth * (mod / 2), strokeWidth * (mod / 2));

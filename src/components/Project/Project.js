@@ -57,7 +57,7 @@ const EmbedBlock = ({ youtubeId, videoSrc, ...props }) => {
       { videoSrc && (
         <JTVideo
           className={styles.blockEmbedIframe}
-          src={videoSrc}/>
+          src={videoSrc.publicURL}/>
       ) }
     </Block>
   )
@@ -67,6 +67,16 @@ const renderBlocks = ({ type, alt, file, text, youtubeId, gif, videoSrc, desktop
   const spans = { desktopSpan, tabletSpan, mobileSpan };
 
   switch (type) {
+    case 'gif':
+      return (
+        <ImageBlock
+          key={ idx }
+          alt={ alt }
+          { ...spans }
+          src={ gif.url.publicURL }
+          width={ gif.width }
+          height={ gif.height }/>
+      );
     case 'image':
       return (
         <ImageBlock

@@ -1,0 +1,47 @@
+order: 5
+title: Stacc
+image: ../assets/projects/stacc/app002.jpg
+type: Application
+category: work
+description: |
+  An application that wraps some very useful, but not so user friendly FFmpeg comands to try and make a more effective gif than you can get from applications like Photoshop or services online.
+
+  [stacc.netlify.com](https://stacc.netlify.com)
+content:
+  - type: image
+    file: ../assets/projects/stacc/desktop.jpg
+    alt: Promotional site
+  - type: image
+    file: ../assets/projects/stacc/footer.jpg
+    alt: The footer of the promotional site
+    desktopSpan: 1 / span 4
+  - type: image
+    file: ../assets/projects/stacc/app001.jpg
+    alt: Clean use interface of the app
+    desktopSpan: 5 / span 8
+  - type: image
+    file: ../assets/projects/stacc/app002.jpg
+    alt: Adding some nice interaction for things like dropping files
+    desktopSpan: 2 / span 10
+  - type: text
+    text: |
+      The motivation was that its crazy how ubiquitous gifs are online, and how its still a _hard_ thing to make a good
+      and efficient one. Despite there being much better alternatives to gifs now, there are still loads of places online that if you need movement or animation, gif is the only option
+    desktopSpan: 3 / span 8
+  - type: image
+    file: ../assets/projects/stacc/app003.jpg
+    alt: The settings page
+    desktopSpan: 1 / span 8
+  - type: image
+    file: ../assets/projects/stacc/app004.jpg
+    alt: Exporting screen
+    desktopSpan: 9 / span 4
+  - type: gif
+    gif:
+      url: ../assets/projects/stacc/export.gif
+      width: 1638
+      height: 864
+    alt: The exported gif
+  - type: embed
+    youtubeId: 3BQxHOn8uy0
+    # desktopSpan: 4 / span 9

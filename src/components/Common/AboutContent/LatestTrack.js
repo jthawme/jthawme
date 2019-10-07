@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import HoverLink from '../HoverLink/HoverLink';
 
-const LAST_FM_BASE = 'http://ws.audioscrobbler.com/2.0/';
+const LAST_FM_BASE = 'https://ws.audioscrobbler.com/2.0/';
 const LAST_FM_KEY = 'fc9a1cb8bc3ba37735ff3941152cb985';
 
 const getUrl = (url, params) => {

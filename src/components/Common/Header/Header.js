@@ -5,10 +5,10 @@ import { Link } from 'gatsby';
 
 import styles from './Header.module.scss';
 
-import logoImg from '../../../images/logo.png';
+// import logoImg from '../../../images/logo.png';
 import Logo from '../Logo/Logo';
 
-const Header = ({ className, pinned }) => {
+const Header = ({ className, pinned, invert }) => {
   const [animateState, setAnimateState] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -40,7 +40,7 @@ const Header = ({ className, pinned }) => {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className={styles.image}>
-          <Link to={"/"}><Logo width="40" height="40"/></Link>
+          <Link to={"/"}><Logo width="40" height="40" invert={invert}/></Link>
         </div>
       </nav>
     </header>

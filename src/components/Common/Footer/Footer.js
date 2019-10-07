@@ -20,7 +20,7 @@ const Footer = ({ className }) => {
         <div className={styles.right}>
           <span className={styles.title}>Get in touch</span>
           <a href="mailto:hi@jthaw.me">hi@jthaw.me</a><br/>
-          <a href="https://linkedin.com/jonny-thaw" target="_blank" rel="noreferrer noopener">LinkedIn</a><br/>
+          <a href="https://linkedin.com/in/jonny-thaw" target="_blank" rel="noreferrer noopener">LinkedIn</a><br/>
           <a href="https://twitter.com/jthawme" target="_blank" rel="noreferrer noopener">@jthawme</a>
         </div>
       </div>

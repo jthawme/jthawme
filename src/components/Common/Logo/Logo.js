@@ -4,18 +4,19 @@ import { generate } from './LogoGenerate'
 
 import styles from './Logo.module.scss';
 
-const Logo = ({ width = 128, height = 128 }) => {
+const Logo = ({ width = 128, height = 128, invert = false }) => {
   const canvasRef = useRef(null);
-
-  useEffect(() => {
-    regen();
-  }, [])
 
   const regen = () => {
     const ctx = canvasRef.current.getContext('2d');
 
-    generate(canvasRef.current, ctx, width, height, width / 32);
+    generate(canvasRef.current, ctx, width, height, width / 32, invert);
   }
+
+  useEffect(() => {
+    regen();
+    // eslint-disable-next-line
+  }, [invert])
 
   let timer;
   const timedRegen = () => {

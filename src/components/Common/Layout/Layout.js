@@ -14,25 +14,31 @@ import BgImage from "../BgImage/BgImage";
 import "../../../styles/global.scss";
 import styles from "./Layout.module.scss"
 
-import logoImg from "../../../images/logo.png";
+// import logoImg from "../../../images/logo.png";
 import Logo from "../Logo/Logo";
 
 const Layout = ({ children, location }) => {
-  const bodyCls = classNames(
-    `page-${location.pathname.split('/').pop()}`
-  );
-
-  document.body.setAttribute('class', bodyCls);
+  const getLocation = () => {
+    return location.pathname.split('/').filter(v => v).pop();
+  };
 
   return (
     <ScrollReact>
       {
         scrollState => (
           <>
-            <Header className={styles.header} {...scrollState}/>
+            <Header
+              className={styles.header}
+              {...scrollState}
+              invert={getLocation() === 'professional'}/>
 
             <div className={styles.top}>
-              <Link to={"/"} className={styles.logo}><Logo width="64" height="64"/></Link>
+              <Link to={"/"} className={styles.logo}>
+                <Logo
+                  width="64"
+                  height="64"
+                  invert={getLocation() === 'professional'}/>
+              </Link>
             </div>
 
             <BgImage className={styles.bg} />

@@ -13,14 +13,21 @@ content:
   - type: image
     file: ../assets/projects/kinegram/info.jpg
     alt: An info page to give an explanation of what kinegrams are
+    desktopSpan: 1 / span 6
   - type: text
     text: |
       The site does everything on the front end, generates all of the necessary imagery and packages it in a zip folder and also creates the gif to preview the end result
+    desktopSpan: 7 / span 5
   - type: image
     file: ../assets/projects/kinegram/design.png
     alt: An info page to give an explanation of what kinegrams are
-  - type: image
-    gif: ../assets/projects/kinegram/pyramid.gif
+    desktopSpan: 4 / span 9
+  - type: gif
+    gif:
+      url: ../assets/projects/kinegram/pyramid.gif
+      width: 1280
+      height: 960
     alt: The example that is created from the site
+    desktopSpan: 1 / span 8
   - type: embed
     videoSrc: ../assets/projects/kinegram/in_action.mp4

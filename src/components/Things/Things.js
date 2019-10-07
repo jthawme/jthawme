@@ -108,6 +108,10 @@ class Things extends React.Component {
   }
 
   displayColumns(data) {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+
     let columns = 1;
 
     if (window.matchMedia('(min-width: 768px').matches) {

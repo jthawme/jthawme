@@ -6,7 +6,7 @@ import Professional from "../components/Professional/Professional";
 
 const ProfessionalPage = ({ data }) => (
   <>
-    <SEO title="Professional" />
+    <SEO title="Professional" htmlClass="page-professional" />
     <Professional {...data.content}/>
   </>
 )
