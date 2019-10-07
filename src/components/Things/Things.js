@@ -2,8 +2,31 @@ import React from 'react';
 
 import classNames from 'classnames';
 
+import ThingsColumns from './ThingsColumns';
+
 import styles from './Things.module.scss';
-import Block from './Twitter/Block';
+
+const getColumns = () => {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+
+  let columns = 1;
+
+  if (window.matchMedia('(min-width: 768px').matches) {
+    columns = 2;
+  }
+
+  if (window.matchMedia('(min-width: 1280px').matches) {
+    columns = 3;
+  }
+
+  if (window.matchMedia('(min-width: 1440px').matches) {
+    columns = 4;
+  }
+
+  return columns;
+}
 
 const Attribution = ({ text, onShuffle, fullscreen }) => {
   const cls = classNames(
@@ -33,6 +56,7 @@ class Things extends React.Component {
       fullscreen: true,
       show: false,
       animate: false,
+      columns: getColumns(),
       info: this.randomThing(props.sketches, true),
       data: []
     };
@@ -58,10 +82,25 @@ class Things extends React.Component {
         });
       });
     }, 100);
+
+    this.addEventListeners();
   }
 
   componentWillUnmount() {
     clearTimeout(this.timer);
+    clearTimeout(this.resizeTimer);
+  }
+
+  addEventListeners() {
+    window.addEventListener('resize', e => {
+      clearTimeout(this.resizeTimer);
+
+      this.resizeTimer = setTimeout(() => {
+        this.setState({
+          columns: getColumns()
+        });
+      }, 250);
+    });
   }
 
   randomThing = (things, init) => {
@@ -94,53 +133,8 @@ class Things extends React.Component {
     });
   }
 
-  renderItem(data, show = true) {
-    if (!show) {
-      return null;
-    }
-
-    return (
-      <Block
-        className={styles.item}
-        key={data.content_id}
-        {...data.content}/>
-    )
-  }
-
-  displayColumns(data) {
-    if (typeof window === 'undefined') {
-      return null;
-    }
-
-    let columns = 1;
-
-    if (window.matchMedia('(min-width: 768px').matches) {
-      columns = 2;
-    }
-
-    if (window.matchMedia('(min-width: 1280px').matches) {
-      columns = 3;
-    }
-
-    if (window.matchMedia('(min-width: 1440px').matches) {
-      columns = 4;
-    }
-
-    const cols = [];
-
-    for (let i = 0; i < columns; i++) {
-      cols.push(data.map((d,idx) => {
-        return this.renderItem(d, idx % columns === i)
-      }));
-    }
-
-    return cols.map((list, i) => {
-      return <div key={ i } className={styles.poolColumn}>{list}</div>
-    })
-  }
-
   render() {
-    const { animate, show, info, data } = this.state;
+    const { animate, show, info, data, columns } = this.state;
 
     const cls = classNames(
       styles.things,
@@ -163,9 +157,12 @@ class Things extends React.Component {
             text={info.text}
             onShuffle={this.onShuffle}/>
         </main>
-        <section className={styles.pool}>
-          { this.displayColumns(data) }
-        </section>
+
+        { !columns ? null : (
+          <ThingsColumns
+            columns={ columns }
+            data={ data }/>
+        ) }
       </div>
     )
   }

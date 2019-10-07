@@ -35,8 +35,8 @@ const Layout = ({ children, location }) => {
             <div className={styles.top}>
               <Link to={"/"} className={styles.logo}>
                 <Logo
-                  width="64"
-                  height="64"
+                  width="56"
+                  height="56"
                   invert={getLocation() === 'professional'}/>
               </Link>
             </div>
