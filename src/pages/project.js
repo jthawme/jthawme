@@ -5,11 +5,11 @@ import { graphql } from "gatsby";
 import SEO from "../components/Common/seo"
 import Project from "../components/Project/Project";
 
-const ProjectPage = (props) => {
-  const { data, pageContext } = props;
+const ProjectPage = ({ data, pageContext }) => {
+  console.log(data.project);
   return (
     <>
-      <SEO title="Project" />
+      <SEO title="Project" image={data.project.socialImage.childImageSharp.fixed.src} />
       <Project {...data.project} pageContext={pageContext}/>
     </>
   )
@@ -23,6 +23,13 @@ export const query = graphql`
       id
       title
       description
+      socialImage: image {
+        childImageSharp {
+          fixed(width: 1600) {
+            src
+          }
+        }
+      }
       content {
         type
         alt

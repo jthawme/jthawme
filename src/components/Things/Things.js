@@ -112,15 +112,30 @@ class Things extends React.Component {
   }
 
   onShuffle = () => {
+    const iframeEl = this.mainRef.current.querySelector('iframe');
+
+    const onIframeLoad = () => {
+      clearTimeout(this.timer);
+
+      this.setState({
+        show: true
+      });
+
+      iframeEl.removeEventListener('load', onIframeLoad);
+    };
+
     const onTransitionEnd = () => {
       this.setState({
         info: this.randomThing(this.props.sketches)
       }, () => {
         this.timer = setTimeout(() => {
-          this.setState({
-            show: true
-          });
-        }, 500);
+          iframeEl.addEventListener('load', onIframeLoad);
+
+          // in case it doesnt send load event
+          this.timer = setTimeout(() => {
+            onIframeLoad();
+          }, 1000);
+        }, 250);
       });
 
       this.mainRef.current.removeEventListener('transitionend', onTransitionEnd);
