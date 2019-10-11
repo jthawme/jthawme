@@ -59,7 +59,6 @@ const Professional = ({ clients, noteworthy, experience }) => {
                     text={title}
                     label={subtitle}
                     vertical
-                    image={file.image.fixed.src}
                     key={idx}/>
                 )
               })

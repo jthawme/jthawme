@@ -4,7 +4,10 @@ image: ../assets/projects/redonate/logo.png
 type: Campaign
 category: work
 description: |
-  Redonate is a scheme that donates thousands of pounds to charity, without any single party spending a penny extra. Instead of spending money on internet advertising, companies put that budget aside to donate to charity instead, then charitable people of the public do the internet ad campaign for the company that has donated by taking pictures of the company’s print adverts and posting it to social networking sites. This fills the void of the missing internet campaign, but allows the business to preserve the message they want to promote. When the advert is posted it is tracked and its value is calculated (in a similar manner to the promoted tweet model) and is deducted from the budget - so by proxy the person who posted the picture donated money to charity by simply donating their time.
+  Redonate is a scheme that I have created that donates thousands of pounds to charity, without any single party spending a penny extra.
+
+  The idea –
+  Instead of spending money on internet advertising, companies put that budget aside to donate to charity instead. Then charitable people of the public _do_ the internet ad campaign for the company that has donated by taking pictures of the company’s print adverts and posting it to social networking sites. This fills the void of the missing internet campaign, but allows the business to preserve the message they want to promote. When the advert is posted it is tracked and its value is calculated (in a similar manner to the promoted tweet model) and is deducted from the budget - so by proxy the person who posted the picture donated money to charity by simply donating their time.
 content:
   - type: image
     file: ../assets/projects/redonate/logo.png
