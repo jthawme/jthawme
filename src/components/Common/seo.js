@@ -12,6 +12,10 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import socialImg from '../../images/social.png';
 
+const prefixSite = url => {
+  return url.substring(4) !== 'http' ? `https://jthaw.me${ url }` : url;
+}
+
 function SEO({ description, lang, meta, title, htmlClass, image = socialImg }) {
   const { site } = useStaticQuery(
     graphql`
@@ -56,7 +60,7 @@ function SEO({ description, lang, meta, title, htmlClass, image = socialImg }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: prefixSite(image),
         },
         {
           name: `twitter:card`,
@@ -76,7 +80,7 @@ function SEO({ description, lang, meta, title, htmlClass, image = socialImg }) {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: prefixSite(image),
         },
       ].concat(meta)}
     />
