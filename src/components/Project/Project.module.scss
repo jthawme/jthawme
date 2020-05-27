@@ -1,8 +1,13 @@
-@import '../../styles/base';
+@import "../../styles/base";
 
 .title {
-  font-size: var(--jt-type-size-5);
-  line-height: var(--jt-type-lh-5);
+  font-size: var(--jt-type-size-4);
+  line-height: var(--jt-type-lh-4);
+
+  @include breakpoint(tablet) {
+    font-size: var(--jt-type-size-5);
+    line-height: var(--jt-type-lh-5);
+  }
 }
 
 // .description {
