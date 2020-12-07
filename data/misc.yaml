@@ -105,6 +105,9 @@ me:
   - image: ./assets/me/008.jpg
   - image: ./assets/me/009.jpg
   - image: ./assets/me/010.jpg
+  - image: ./assets/me/011.jpg
+  - image: ./assets/me/012.jpg
+  - image: ./assets/me/013.gif
 
 travel:
   - image: ./assets/travel/001.jpg

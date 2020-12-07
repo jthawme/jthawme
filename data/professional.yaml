@@ -5,15 +5,22 @@ clients:
   - Dropbox
   - Google
   - KFC
+  - The Liminal Space
+  - MSCHF
+  - Royal College of Art
   - Save the Children
   - Samsung
   - Tate Modern
   - Virgin Records
   - Youtube
 experience:
+  - title: MSCHF (Contract)
+    subtitle: Senior Developer
+    date: Jul 20 - Present
+
   - title: UAL
     subtitle: Special Lecturer
-    date: Mar 20 - Present
+    date: Mar 20 - Dec 20
 
   - title: Planes (Contract)
     subtitle: Senior Developer
@@ -36,11 +43,35 @@ experience:
     date: May 13 - Dec 15
 
 noteworthy:
+  - title: Creative Boom article
+    subtitle: Press
+    date: Dec 20
+    link: https://www.creativeboom.com/inspiration/life-support-is-a-new-digital-tool-to-help-us-talk-about-death/
+
+  - title: The Verge article
+    subtitle: Press
+    date: Aug 20
+    link: https://www.theverge.com/2020/8/10/21361894/masterwiki-mschf-masterclass-ripoff-wikihow
+
+  - title: Product Hunt top product
+    subtitle: MasterWiki
+    info: Masterclass for the people
+    date: Aug 20
+    link: https://www.producthunt.com/posts/masterwiki
+
   - title: Product Hunt top product
     subtitle: Stacc
     info: An Electron app side project
     date: Jun 19
     file: ./assets/noteworthy/stacc.jpg
+    link: https://www.producthunt.com/posts/stacc
+
+  - title: Featured by GrilliType
+    subtitle: Friends of Kerouac
+    info: Highlighting the type led project
+    date: May 19
+    file: ./assets/noteworthy/grillitype.png
+    link: https://www.instagram.com/p/Bx4n5vWg1bc/
 
   - title: Work exhibited at Google I/O extended
     subtitle: aispy.io
@@ -71,6 +102,7 @@ noteworthy:
     info:
     date: Jan 15
     file: ./assets/noteworthy/fsnp.png
+    link: https://www.awwwards.com/sites/fullstopnewparagraph
 
   - title: RSA Awards Finalist
     subtitle: Redonate

@@ -1,25 +1,27 @@
 import React from "react"
 
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
 
 import SEO from "../components/Common/seo"
-import Project from "../components/Project/Project";
+import Project from "../components/Project/Project"
 
 const ProjectPage = ({ data, pageContext }) => {
-  console.log(data.project);
   return (
     <>
-      <SEO title="Project" image={data.project.socialImage.childImageSharp.fixed.src} />
-      <Project {...data.project} pageContext={pageContext}/>
+      <SEO
+        title="Project"
+        image={data.project.socialImage.childImageSharp.fixed.src}
+      />
+      <Project {...data.project} pageContext={pageContext} />
     </>
   )
-};
+}
 
 export default ProjectPage
 
 export const query = graphql`
   query($slug: String) {
-    project: projectYaml(fields: {slug: {eq: $slug}}) {
+    project: projectYaml(fields: { slug: { eq: $slug } }) {
       id
       title
       description
@@ -71,4 +73,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

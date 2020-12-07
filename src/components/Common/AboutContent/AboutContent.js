@@ -16,6 +16,7 @@ const query = graphql`
               src
             }
           }
+          publicURL
         }
       }
       travel {
@@ -25,6 +26,7 @@ const query = graphql`
               src
             }
           }
+          publicURL
         }
       }
     }
@@ -33,6 +35,13 @@ const query = graphql`
 
 const rand = arr => {
   return arr[Math.floor(arr.length * Math.random())]
+}
+
+const getImage = image => {
+  console.log(image)
+  return image.childImageSharp
+    ? image.childImageSharp.fixed.src
+    : image.publicURL
 }
 
 const AboutContent = ({ small = false }) => {
@@ -50,7 +59,7 @@ const AboutContent = ({ small = false }) => {
     <>
       <p className={styles.paragraph}>
         <HoverLink
-          image={meImg ? meImg.image.childImageSharp.fixed.src : null}
+          image={meImg ? getImage(meImg.image) : null}
           to={small ? "/about" : "https://twitter.com/jthawme"}
         >
           I am
@@ -67,14 +76,10 @@ const AboutContent = ({ small = false }) => {
             like making things "just 'cos".
           </p>
           <p className={styles.paragraph}>
-            Besides work, I love music. I used to display the latest track I was
-            listening to via last.fm which was neat, but I got rid of all my
-            streaming services to only listen to CDs. I have a walkman, truly. I
-            also love travelling, for memories like{" "}
+            Besides work, I love music. I'm currently listening to{" "}
+            <LatestTrack />. I also love travelling, for memories like{" "}
             <HoverLink
-              image={
-                travelImg ? travelImg.image.childImageSharp.fixed.src : null
-              }
+              image={travelImg ? getImage(travelImg.image) : null}
               to="https://twitter.com/jthawme"
             >
               this
@@ -82,9 +87,8 @@ const AboutContent = ({ small = false }) => {
             , although I haven't done it as much as I'd want.
           </p>
           <p className={styles.paragraph}>
-            This next line used to say 'Make believe chef, aspiring marathon
-            runner and lover/hater of the internet.' and I am none of those
-            things now. Its weird how time changes all the time.
+            This about page gets updated every so often, because I come back and
+            look and think "Damn, I gave up on that I guess"
           </p>
           <p className={styles.paragraph}>
             If you want to see a more professional overview, please check out{" "}

@@ -1,13 +1,13 @@
 import React from "react"
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
 
 import SEO from "../components/Common/seo"
-import Professional from "../components/Professional/Professional";
+import Professional from "../components/Professional/Professional"
 
 const ProfessionalPage = ({ data }) => (
   <>
     <SEO title="Professional" htmlClass="page-professional" />
-    <Professional {...data.content}/>
+    <Professional {...data.content} />
   </>
 )
 
@@ -15,7 +15,7 @@ export default ProfessionalPage
 
 export const query = graphql`
   query {
-    content: dataYaml(fields: {slug: {eq: "professional"}}) {
+    content: dataYaml(fields: { slug: { eq: "professional" } }) {
       id
       clients
       noteworthy {
@@ -23,6 +23,7 @@ export const query = graphql`
         subtitle
         info
         date
+        link
         file {
           image: childImageSharp {
             id
@@ -39,4 +40,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
