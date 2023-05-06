@@ -7,7 +7,7 @@
   "dependencies": {
     "animated-scroll-to": "^2.0.2",
     "classnames": "^2.2.6",
-    "gatsby": "^2.15.15",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.2.19",
     "gatsby-plugin-extract-image-colors": "0.0.14",
     "gatsby-plugin-manifest": "^2.2.16",
